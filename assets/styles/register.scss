@@ -1,0 +1,54 @@
+.registerTitle {
+  font-size: 38px;
+  font-family: Inter-Medium, Inter;
+  font-weight: 500;
+  color: #020300;
+  -webkit-background-clip: text;
+  padding: 10px;
+}
+
+.smallTitle {
+  font-size: 20px;
+  font-family: Inter-Medium, Inter;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  -webkit-background-clip: text;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.registerTitle-subtitle {
+  height: 52px;
+  font-size: 20px;
+  font-family: Inter-Medium, Inter;
+  font-weight: 500;
+  color: #505050;
+  line-height: 26px;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .registerTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .smallTitle {
+    width: 70%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .smallTitle {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+/* 自适应兼容 */
+.main_container {
+  width: 100%;
+}

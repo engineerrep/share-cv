@@ -1,0 +1,325 @@
+// h5适配
+@media (max-width: 400px) {
+
+  .h5-center {
+    padding: 0 16px;
+  }
+
+  // 头部导航
+  .header {
+    background-color: #f3f0ee;
+
+    .logo-img {
+      height: 32px;
+    }
+  }
+  .el-input {
+    height: 44px;
+  }
+
+  // 欢迎来到真正的简历社区
+  .greet-main {
+    margin-top: 26px;
+
+    .show-greet-main {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .frame-img {
+      display: none;
+    }
+
+    .h5-frame-img {
+      display: block;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .greet {
+      width: 100%;
+      min-width: 100%;
+
+      .email-password-input {
+        height: 44px;
+        padding: 20px 18px 0;
+      }
+
+      .form-item {
+        width: 100%;
+        min-width: 100%;
+      }
+
+      .sign-in-form {
+        width: 100%;
+        min-width: 100%;
+        padding: 0;
+        line-height: 44px;
+
+        input {
+          width: 100%;
+          min-width: 100%;
+        }
+
+        label {
+          font-size: 12px;
+          top: -8px;
+        }
+
+        .btn {
+          min-width: 100%;
+          height: 44px;
+          font-size: 20px;
+        }
+
+        .sign-in-with-google {
+          font-size: 16px;
+        }
+
+      }
+
+      .form-item input:focus + label,
+      .form-item input:valid + label {
+        font-size: 12px;
+        top: -6px;
+      }
+
+      .resume-community-title {
+        margin-bottom: 26px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .pwd-state {
+        top: 12px;
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+      }
+
+      .forgot-password {
+        margin: 16px 0 26px;
+        height: 17px;
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        line-height: 16px;
+      }
+
+      .division-or {
+        min-width: 100%;
+        margin-top: 26px;
+        margin-bottom: 40px;
+
+        .or {
+          width: 40px;
+          top: -23px;
+        }
+      }
+
+      .google-symbol-img {
+        width: 20px;
+        height: 20px;
+        margin-right: 11px;
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .h5-greet-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 38px;
+      padding-bottom: 24px;
+    }
+  }
+
+  // 提供完整简历
+  .h5-full-resume-main {
+    display: block;
+
+    .complete-resume,
+    .h5-share-title {
+      display: block;
+      margin: 0;
+      padding: 34px 0 32px;
+      font-size: 20px;
+      width: 100%;
+      font-weight: 300;
+    }
+
+    .component {
+      width: 100%;
+      padding-bottom: 44px;
+    }
+
+    .component-title {
+      padding: 0;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .complete-item {
+      margin-left: 0;
+      font-size: 16px;
+      margin-right: 16px;
+    }
+
+    .h5-share-title {
+      display: block;
+      font-weight: 300;
+    }
+
+    .share-title {
+      display: none;
+    }
+  }
+
+  // 分享你的简历，让更多人了解你
+  .share-resume-main {
+    display: block;
+
+    .share-esume-title {
+      font-size: 20px;
+      margin-top: 34px;
+      margin-bottom: 33px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .share-resume-dom {
+      width: auto;
+      margin-top: 0;
+      margin-bottom: 44px;
+    }
+
+    .h5-share-esume-title {
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      padding-top: 34px;
+      margin-bottom: 33px;
+      margin-top: 0;
+    }
+
+    .share-esume-title {
+      display: none;
+    }
+
+    .share-resume-btn {
+      height: 54px;
+      padding: 10px 31px;
+      margin: 6px;
+      text-align: center;
+      border-radius: 76px;
+      font-size: 20px;
+    }
+  }
+
+  // 个人介绍
+  .h5-self-introduction {
+    display: block;
+    padding-bottom: 35px;
+
+    .self-introduction-title01 {
+      width: 100%;
+      padding-top: 34px;
+      padding-bottom: 0px;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .h5-self_introduction_title01 {
+      display: block;
+      line-height: 26px;
+      white-space: pre-line;
+    }
+
+    .self_introduction_title01 {
+      display: none;
+    }
+
+    .h5-self_introduction_title02 {
+      width: 100%;
+      display: block;
+      height: 68px;
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 22px;
+      margin-bottom: 27px;
+    }
+
+    .self_introduction_title02 {
+      display: none;
+    }
+
+    .personal-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 27px;
+    }
+
+    .personal-display-img {
+      display: none;
+    }
+
+    .personal-display-img {
+      display: none;
+    }
+
+    .h5-personal-display-img {
+      display: block;
+      width: 273.09px;
+      height: 273.09px;
+    }
+  }
+
+  //
+  .img-exhibit {
+    display: none;
+  }
+
+  .tail {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+
+    .tail-right {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .tail-item {
+      margin-right: 0px;
+    }
+
+    .log-bottom {
+      width: 56px;
+      height: 20px;
+    }
+  }
+  .logo-min-img {
+    margin-top: 16px;
+  }
+
+  .cv-button {
+    height: 44px;
+  }
+  .sign-in-with-google {
+    height: 44px;
+  }
+  .sign-in-google {
+    line-height: 44px;
+  }
+  .greet-main .greet .or {
+    left: auto;
+  }
+  .share-resume {
+    height: 219px;
+  }
+}

@@ -1,0 +1,77 @@
+kind: pipeline
+type: docker
+name: sharecvweb
+
+platform:
+  os: linux
+  arch: amd64
+
+Jobspace:
+  path: sharecvweb
+
+clone:
+  disable: true
+
+steps:
+  - name: web-clone
+    image: alpine/git
+    environment:
+      SSH_KEY:
+        from_secret: deploy_key
+    commands:
+      - mkdir -p /root/.ssh/
+      - echo "$SSH_KEY" > /root/.ssh/id_rsa
+      - chmod -R 600 /root/.ssh/
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - git clone -v git@github.com:DanielZSY/sharecvweb.git .
+
+  - name: web-build
+    image: node:18.14.2
+    pull: if-not-exists
+    user: root
+    depends_on: [ web-clone ]
+    volumes:
+      - name: node_modules
+        path: /drone/src/node_modules
+      - name: output
+        path: /drone/src/.output
+      - name: run_docker
+        path: /var/run/docker.sock
+    commands:
+      - chmod +x build.sh
+      - sh build.sh
+
+  - name: web-run
+    image: plugins/docker:latest
+    pull: if-not-exists
+    user: root
+    depends_on: [ web-build ]
+    volumes:
+      - name: node_modules
+        path: /drone/src/node_modules
+      - name: output
+        path: /drone/src/.output
+      - name: run_docker
+        path: /var/run/docker.sock
+    settings:
+      dockerfile: Dockerfile
+    commands:
+      - chmod +x docker.sh
+      - sh docker.sh
+
+volumes: # 声明数据卷
+  - name: node_modules # 数据卷名称
+    host:
+      path: /data/node/nuxt/node_modules # 宿主机目录 绝对路径
+  - name: output
+    host:
+      path: /data/node/nuxt/output
+  - name: run_docker
+    host:
+      path: /var/run/docker.sock
+
+trigger:
+  branch:
+    - main
+  event:
+    - push

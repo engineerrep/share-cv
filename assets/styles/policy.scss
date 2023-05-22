@@ -1,0 +1,32 @@
+.policy-main {
+  width: 940px;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: Plus Jakarta Sans-SemiBold, Plus Jakarta Sans;
+  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 63px;
+  word-wrap: break-word;
+  font-weight: 600;
+
+  .protocol-title {
+    font-size: 24px;
+  }
+
+  p {
+    margin-bottom: 14px;
+  }
+}
+
+// h5适配
+@media (max-width: 400px) {
+  .policy-main {
+    width: auto;
+    padding: 0 16px;
+    font-size: 12px;
+
+    .protocol-title {
+      font-size: 20px;
+    }
+  }
+}

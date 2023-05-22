@@ -1,0 +1,482 @@
+.add-to-Job-experience, .add-to-education, .add-to-custom-item, .add-to-project-experience, .add-to-education, {
+  height: 80vh;
+
+  .share-youry-profile-main {
+    height: calc(80vh - 164px);
+    overflow: auto;
+  }
+}
+
+
+.add-to-volunteer {
+  height: 68vh;
+
+  .share-youry-profile-main {
+    height: calc(68vh - 164px);
+    overflow: auto;
+  }
+}
+
+.edit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(#363636, 0.4);
+}
+
+// 裁剪
+.vue-cropper {
+  width: 600px;
+  height: 230px;
+}
+
+.cropper-content {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+}
+
+.cropper-box {
+  flex: 1;
+  width: 100%;
+}
+
+.show-preview {
+  flex: 1;
+  -webkit-flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.cropper {
+  width: auto;
+  height: 300px;
+}
+
+.preview {
+  overflow: hidden;
+  border: 1px solid #67c23a;
+  background: #cccccc;
+}
+
+.cropper-view-box {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid #39f;
+  outline-color: rgba(51, 153, 255, .75);
+  user-select: none;
+}
+
+.img {
+  width: 69px;
+  height: 69px;
+  background: #d9d9d9;
+  border-radius: 0px 0px 0px 0px;
+  opacity: 1;
+}
+
+.add-to-project-experience {
+  width: 736px;
+}
+
+.edit-avatar {
+  width: 993px;
+  background: #ffffff;
+  border-radius: 13px 13px 13px 13px;
+  opacity: 1;
+
+  .edit-avatar-head {
+    justify-content: space-between;
+  }
+
+  .edit-avatar-title {
+    font-size: 25px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #000000;
+  }
+
+
+  .edit-avatar-main {
+    width: 993px;
+    height: 493px;
+    opacity: 1;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .to-refresh-img {
+    position: absolute;
+    bottom: 50px;
+    right: 26px;
+  }
+
+  .avatar-img {
+    width: 307px;
+    height: 307px;
+    border: 2px solid #fff;
+    border-radius: 154px 154px 154px 154px;
+    opacity: 1;
+    margin: 0px auto 18px;
+
+    .n-upload {
+      width: 307px;
+      height: 307px;
+      border: 2px solid #fff;
+      border-radius: 154px 154px 154px 154px;
+    }
+  }
+}
+
+.add-to-Job-experience, .add-to-custom-item {
+  width: 736px;
+}
+
+.edit-avatar-closure {
+  display: flex;
+  align-items: center;
+  padding-right: 32px;
+}
+
+.edit-in-your-profile {
+  width: 997px;
+  //height: 986px;
+  background: #ffffff;
+  border-radius: 12px 12px 12px 12px;
+  opacity: 1;
+  border: 1px solid #e0e0e0;
+
+  .edit-in-your-profile-main {
+    .indicates-required {
+      height: 19px;
+      font-size: 16px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      color: #828282;
+      line-height: 19px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .edit-in-your-profile-title {
+    font-size: 25px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #000000;
+    line-height: 29px;
+    padding: 25px 38px 26px 30px;
+    border-bottom: 1px solid #ededed;
+  }
+
+  .your-location {
+    height: 36px;
+    font-size: 30px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #000000;
+    line-height: 35px;
+    margin-top: 25px;
+  }
+
+  .recruiters-note {
+    height: 22px;
+    font-size: 18px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #828282;
+    line-height: 21px;
+    margin-bottom: 23px;
+  }
+}
+
+.save-btn {
+  opacity: 1;
+  position: relative;
+  left: -20px;
+  width: calc(100% + 58px);
+  border-top: 1px solid #eeeeee;
+
+  .n-button {
+    width: 91px;
+    height: 42px;
+    margin-top: 17px;
+    margin-right: 39px;
+  }
+}
+
+.add-toyour-profile {
+  width: 736px;
+  background: #ffffff;
+  border-radius: 12px 12px 12px 12px;
+  opacity: 1;
+
+  .recent-Job-experience {
+    height: 36px;
+    font-size: 30px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #000000;
+    line-height: 35px;
+  }
+
+  .match-the-right-job {
+    height: 22px;
+    font-size: 18px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #333333;
+    line-height: 21px;
+  }
+
+  .space {
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+
+  .ux-analystss {
+    height: 25px;
+    font-size: 21px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #000000;
+    line-height: 25px;
+  }
+
+  .mobbinss {
+    height: 22px;
+    font-size: 18px;
+    font-family: Inter-Regular, Inter;
+    font-weight: 400;
+    color: #333333;
+    line-height: 21px;
+  }
+
+  .skill-title {
+    height: 36px;
+    font-size: 30px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #000000;
+    line-height: 35px;
+  }
+
+  .skill-top5 {
+    width: 682px;
+    height: 49px;
+    font-size: 18px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #585858;
+    line-height: 21px;
+  }
+
+  .recommended-skills {
+    width: 632px;
+    height: 22px;
+    font-size: 18px;
+    font-family: Inter-Regular, Inter;
+    font-weight: 400;
+    color: #828282;
+    line-height: 21px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.background-editor {
+  .background-editor-main {
+    width: 993px;
+    height: 493px;
+    background: #000000;
+    opacity: 1;
+    padding: 92px 33px 0;
+  }
+
+  .background-editor-content {
+    width: 928px;
+    height: 232px;
+    background-color: #0a66c2;
+    opacity: 1;
+  }
+}
+
+.share-youry-profile {
+  height: 328px;
+
+  .share-youry-profile-main {
+    padding: 25px 32px 48px;
+    border-top: 1px solid #f5f5f5;
+
+  }
+}
+
+.add-to-education {
+  width: 736px;
+  max-height: 700px;
+}
+
+.add-to-project-experience {
+  width: 736px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  max-height: 80%;
+  overflow: scroll;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.share-youry-profile-main {
+  padding: 25px 30px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.add-to-interests {
+  .title {
+    height: 22px;
+    font-size: 18px;
+    font-family: Inter-Regular, Inter;
+    font-weight: 400;
+    color: #333333;
+    line-height: 21px;
+  }
+
+  .add-to-interests-item {
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+}
+
+.add-to-project-experience-bullet-box {
+  width: 736px;
+
+  .share-youry-profile-main {
+    padding: 25px 32px 0;
+  }
+}
+
+.add-to-dream-position {
+  height: 660px;
+  width: 736px;
+}
+
+.edit-avatar-tail1 {
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+.two-plate {
+  .popup-title {
+    position: relative;
+    padding: 24px 32px;
+    font-size: 25px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #000000;
+    line-height: 29px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popup-closed {
+    padding-right: 0;
+  }
+
+  .tail {
+    padding: 22px 32px;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.h5-popup-closed {
+  display: none;
+}
+
+.popup-closed {
+  display: block;
+}
+
+.skills-item-btn {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  background-color: #327548;
+  color: #fff;
+  border-radius: 42px;
+  font-size: 21px;
+  font-family: Inter-Semi Bold, Inter;
+  font-weight: normal;
+  margin-top: 15px;
+
+  .bullet-box-add-icon {
+    margin-left: 9px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.edit-avatar-tail {
+  height: 86px;
+}
+
+.save-tail-btn {
+  padding: 22px 36px;
+  font-size: 21px;
+  font-family: Inter-Semi Bold, Inter;
+  font-weight: normal;
+  color: #FFFFFF;
+  line-height: 25px;
+  background: #0A66C2;
+}
+
+.edit-form {
+  padding: 22px 32px 29px 32px;
+}
+
+.edit-avatar-tail
+.form {
+  padding: 22px 32px 29px 32px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.interval {
+  position: relative;
+  top: 14px;
+  left: 0px;
+}
+
+.el-form-item {
+  //margin-bottom:  33px;
+}
+
+.el-form-item-last {
+  margin-bottom: 0;
+}
+
+.add-to-about-me {
+  height: 580px;
+  max-height: 580px;
+
+  .edit-form {
+    height: calc(580px - 164px);
+  }
+}
+
+.cv-button {
+  width: 104px;
+  height: 42px;
+}

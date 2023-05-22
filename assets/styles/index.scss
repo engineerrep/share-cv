@@ -1,0 +1,584 @@
+.center {
+  padding: 0 10%;
+}
+
+.ba {
+  background: #f4f2f0;
+}
+
+.ba01 {
+  background: #f3f0ee;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  height: 73px;
+  border-radius: 64px;
+  opacity: 1;
+  border: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.t-l-center {
+  text-align: center;
+}
+
+html {
+  font-size: 16px;
+}
+
+.hint-input {
+  position: absolute;
+  color: #d03050;
+}
+
+.email-password-input {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.greet-main .greet .form-item .hint-input-border {
+  border-color: #d03050;
+
+  &:hover {
+    border-color: #d03050;
+
+  }
+}
+
+// 头部导航
+.header {
+
+  .header_bg {
+    background: #fff;
+  }
+
+  .header-nav {
+    height: 110px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px;
+    opacity: 1;
+  }
+
+  .logo-img {
+    width: 140px;
+    height: 50px;
+  }
+
+  .join-now {
+    button {
+      width: 132px;
+      height: 50px;
+      margin-left: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+.head-avatarImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 21px;
+}
+
+.el-input {
+  height: 64px;
+}
+
+// 欢迎来到真正的简历社区
+.greet-main {
+  margin-top: 59px;
+  position: relative;
+
+  .show-greet-main {
+    margin-bottom: 100px;
+  }
+
+  .greet {
+    width: 670px;
+    min-width: 545px;
+    font-family: Inter-Light, Inter;
+    font-weight: 300;
+    color: #7e594d;
+    margin-right: 110px;
+
+
+    .resume-community-title {
+      font-size: 55px;
+      min-width: 762px;
+      line-height: 82px;
+      position: relative;
+      z-index: 9;
+    }
+
+    .sign-in-form {
+      padding-top: 48px;
+      width: 545px;
+
+      label {
+        position: absolute;
+        top: 3px;
+        left: 16px;
+        min-width: 545px;
+        color: #000;
+        font-size: 16px;
+        line-height: 48px;
+        pointer-events: none;
+        transition: all 0.5s;
+      }
+
+      .pwd-label {
+        top: 24px;
+      }
+    }
+
+    .sign-in-form input,
+    .sign-in-form .btn,
+    .division-or {
+      min-width: 545px;
+    }
+
+
+    .form-item {
+      min-width: 545px;
+    }
+
+    .sign-in-with-google {
+      color: #616363;
+      border: 1px solid #000000;
+      position: relative;
+    }
+
+    .email-password-input {
+      width: 100%;
+      height: 64px;
+      padding-top: 34px;
+      padding-left: 16px;
+      border-radius: 6px;
+      opacity: 1;
+      border: 1px solid #696969;
+
+      &:hover {
+        border: 2px solid #60ace5;
+      }
+    }
+
+    .email-password-input02 {
+      margin-top: 16px;
+    }
+
+    .pwd-state {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      color: #4b4b4b;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+    }
+
+    .forgot-password {
+      margin: 27px 0 36px;
+      font-size: 20px;
+      font-family: Inter-Extra Bold, Inter;
+      font-weight: normal;
+      color: #4b4b4b;
+      cursor: pointer;
+    }
+
+    .dividing-line {
+      margin: 0 16px;
+      overflow: hidden;
+    }
+
+    .division-or {
+      position: relative;
+      margin-top: 45px;
+      margin-bottom: 33px;
+      display: flex;
+      justify-content: center;
+      height: 2px;
+      background: #d9d9d9;
+    }
+
+    .or {
+      position: absolute;
+      top: -14px;
+      left: 226px;
+      width: 60px;
+      text-align: center;
+      font-size: 20px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      color: #1c1c1c;
+      background-color: #fff;
+    }
+
+    .google-symbol-img {
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+      margin-right: 31px;
+    }
+  }
+
+  .frame-img {
+    width: 750px;
+    min-width: 750px;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .h5-frame-img {
+    display: none;
+  }
+
+  .password-item {
+    margin-top: 16px;
+  }
+}
+
+// 提供完整简历
+.full-resume {
+  .complete-resume {
+    display: flex;
+    width: 592px;
+    justify-content: space-around;
+    padding-top: 66px;
+    padding-bottom: 256px;
+    font-size: 50px;
+    font-family: Inter-Light, Inter;
+    font-weight: 300;
+    color: #2a2b28;
+    padding-right: 72px;
+  }
+}
+
+// 分享你想要分享的目标
+.share {
+  .share-title {
+    display: block;
+    margin-top: 66px;
+    font-size: 51px;
+    font-weight: 300;
+    font-family: Inter-Light, Inter;
+    width: 595px;
+    padding-right: 80px;
+  }
+
+  .h5-share-title {
+    display: none;
+  }
+}
+
+// 分享你想要分享的目标和提供完整简历-右侧的item
+
+.component {
+  padding-bottom: 100px;
+  font-family: Inter-Semi Bold, Inter;
+  font-weight: normal;
+  color: #7d7e7b;
+
+  .component-title {
+    padding-top: 77px;
+    padding-bottom: 24px;
+    //margin-top: 20px;
+  }
+
+  .complete-item {
+    padding: 10px 31px;
+    margin-right: 6px;
+    margin-bottom: 18px;
+    text-align: center;
+    border-radius: 76px;
+    opacity: 1;
+    border: 2px solid #646260;
+  }
+
+  .component-item > :nth-child(1) {
+    border: 2px solid #005bb6;
+  }
+
+}
+
+// 分享你的简历，让更多人了解你
+.share-resume {
+  background: #f2ede5;
+  font-size: 3rem;
+
+  .share_esume_title {
+    margin-top: 93px;
+    margin-bottom: 107px;
+    color: #bf4725;
+    font-size: 50px;
+    width: 600px;
+  }
+
+  .share-resume-dom {
+    margin-top: 116px;
+    margin-bottom: 130px;
+  }
+
+  .share-resume-btn {
+    width: auto;
+    height: 76px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 39px;
+    opacity: 1;
+    border: 2px solid #005bb6;
+    color: #005bb6;
+    font-size: 2rem;
+  }
+
+  .share-esume-title {
+    display: block;
+  }
+
+  .h5-share-esume-title {
+    display: none;
+  }
+}
+
+
+// 个人介绍
+.self-introduction-main {
+  margin-right: 10px;
+
+  .self-introduction-title01 {
+    width: 817px;
+    height: auto;
+    margin-top: 400px;
+    font-size: 50px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #8b5f52;
+    line-height: 59px;
+  }
+
+  .self-introduction-title02 {
+    width: 819px;
+    height: auto;
+    margin-bottom: 302px;
+    font-size: 40px;
+    font-family: Inter-Light, Inter;
+    font-weight: 300;
+    color: #323331;
+    line-height: 47px;
+    margin-top: 33px;
+    display: block;
+  }
+
+  .h5-self_introduction_title01 {
+    display: none;
+    line-height: 26px;
+  }
+
+  .self_introduction_title01 {
+    display: block;
+  }
+
+  .h5-self_introduction_title02 {
+    display: none;
+  }
+
+  .personal-display {
+    margin-top: 305px;
+  }
+
+  .personal-display-img {
+    display: block;
+  }
+
+  .h5-personal-display-img {
+    display: none;
+  }
+}
+
+// 图片展示
+.img-exhibit {
+  width: 100%;
+  height: 849px;
+  background-image: url('../../assets/img/image-display.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+// 尾部
+.tail {
+  // height: 67px;
+  line-height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .tail-item {
+    margin-right: 65px;
+  }
+
+  .logo-min-img {
+    width: 240px;
+    align-items: center;
+  }
+
+  img {
+    width: 74px;
+    height: 26px;
+    margin-right: 8px;
+  }
+
+  .corporation {
+    text-align: right;
+  }
+}
+
+.df {
+  display: flex;
+}
+
+.df-wrap {
+  flex-wrap: wrap;
+}
+
+.df-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex1 {
+  width: 50%;
+}
+
+
+img {
+  vertical-align: middle;
+}
+
+.pr {
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: 0;
+}
+
+.cv-button {
+  width: 100%;
+  height: 73px;
+  border-radius: 40px;
+}
+
+.sign-in-google {
+  display: block;
+  line-height: 73px
+}
+
+//.el-input:active {
+//  background-color: rgba(255, 255, 255, 1);;
+//}
+
+/* 自适应兼容 */
+@media (min-width: 1740px) {
+  .center02 {
+    padding: 0 9%;
+  }
+}
+
+@media screen and (min-width: 1640px) and (max-width: 1740px) {
+  .center02 {
+    padding: 0 8%;
+  }
+
+  .frame-img {
+    left: 1%;
+  }
+}
+
+@media screen and (min-width: 1540px) and (max-width: 1640px) {
+  .center02 {
+    padding: 0 7%;
+  }
+
+  .frame-img {
+    left: 2%;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1540px) {
+  .center02 {
+    padding: 0 6%;
+  }
+
+  .frame-img {
+    left: 3%;
+  }
+}
+
+@media screen and (min-width: 1340px) and (max-width: 1440px) {
+  .center02 {
+    padding: 0 5%;
+  }
+
+  .frame-img {
+    left: 4%;
+  }
+}
+
+@media screen and (min-width: 1240px) and (max-width: 1340px) {
+  .center02 {
+    padding: 0 4%;
+  }
+
+  .frame-img {
+    left: 5%;
+  }
+}
+
+@media screen and (min-width: 1140px) and (max-width: 1240px) {
+  .center02 {
+    padding: 0 2%;
+  }
+
+  .frame-img {
+    left: 8%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .center02 {
+    padding: 0 2%;
+  }
+
+  .frame-img {
+    left: 8%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+
+  .tail-right {
+    display: block;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .tail-item {
+      white-space: nowrap;
+    }
+  }
+}

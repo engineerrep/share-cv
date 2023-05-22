@@ -1,0 +1,107 @@
+// h5适配
+@media (max-width: 400px) {
+  .edit-avatar {
+    width: 100%;
+    overflow-x: hidden;
+
+    .edit-avatar-main {
+      width: 100%;
+    }
+  }
+  .edit-in-your-profile {
+    overflow-x: hidden;
+
+    .recruiters-note {
+      font-size: 14px;
+    }
+
+    .edit-in-your-profile-main {
+      padding: 11px 38px 0 20px;
+    }
+
+    .your-location {
+      font-size: 26px;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+
+  .plate-border-bottom {
+    border-bottom: 1px solid #eaeaea;
+  }
+  .edit-avatar .edit-avatar-main, .edit-avatar .avatar-img {
+    height: auto;
+  }
+  .add-to-interests .title {
+    font-size: 12px;
+  }
+  .center {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    height: 60%;
+    padding-bottom: 20px;
+
+    .edit-avatar-title {
+      text-align: center;
+      line-height: normal;
+      //padding: 10px 0 30px;
+      font-size: 21px;
+    }
+
+    .tail {
+      padding: 20px 32px 0;
+      height: auto;
+    }
+  }
+  .two-plate {
+    height: auto;
+  }
+  .edit-avatar-plate {
+    height: 54%;
+  }
+  .add-toyour-profile {
+    overflow-x: hidden;
+  }
+  .edit {
+    .popup-title {
+      display: flex;
+      padding: 16px;
+      align-items: center;
+    }
+  }
+
+  .edit-avatar-closure {
+    position: relative;
+  }
+  //.h5-popup-closed {
+  //  display: block;
+  //  position: absolute;
+  //  top: 18px;
+  //  right: -14px;
+  //}
+  //.popup-closed {
+  //  display: none;
+  //}
+
+  .save-btn .n-button {
+    margin-top: 0px;
+    margin-right: 0px
+  }
+  .save-tail-btn {
+    padding: 8px 26px;
+    font-size: 16px;
+  }
+
+  .skills-item-btn {
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .pop-ups-skills {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

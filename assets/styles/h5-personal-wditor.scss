@@ -1,0 +1,1326 @@
+// h5适配
+@media (max-width: 400px) {
+  .df-j-content-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .personal-wditor-main,
+  .personal-wditor-right {
+    min-width: 100%;
+    width: 100%;
+  }
+  .personal-wditor-right {
+    padding-bottom: 80px;
+  }
+
+  .personal-wditor-left {
+    display: none;
+  }
+
+  .personal-wditor {
+    padding: 0 16px;
+    width: 100%;
+    min-width: 100%;
+    //margin-top: ;
+  }
+
+  .personal-wditor-main {
+    display: block;
+    padding: 0;
+  }
+
+  .personal-img {
+    .personal-strength-ba {
+      display: none;
+    }
+
+    .h5-personal-strength-ba {
+      display: block;
+      width: 100%;
+    }
+
+    .h5-camera-img {
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+
+    .frame-img-02 {
+      display: none;
+    }
+
+    .h5-frame-img-02 {
+      display: block;
+
+    }
+
+    .frame-img-02-dom {
+      width: 70px;
+      height: 70px;
+      top: 36px;
+      left: 10px;
+    }
+  }
+
+  .personal-wditor {
+    background-color: #fff;
+  }
+
+  .personal-wditor-right {
+    .personal-wditor-center-02 {
+      padding: 0;
+    }
+
+    .personal-img {
+      padding-bottom: 0;
+    }
+
+    // 个人信息
+    .personal-information {
+      padding-top: 36px;
+    }
+
+    .h5-edit-square-img {
+      display: block;
+      position: absolute;
+      top: 37px;
+      right: 0;
+    }
+
+    .family-name {
+      width: 131px;
+      height: 29px;
+      font-size: 24px;
+      font-family: Inter-Semi Bold, Inter;
+      font-weight: normal;
+      color: #000000;
+      line-height: 28px;
+    }
+
+    .occupation {
+      width: 184px;
+      height: 22px;
+      font-size: 18px;
+      font-family: Inter-Regular, Inter;
+      font-weight: 400;
+      color: #333333;
+      line-height: 21px;
+      margin: 10px 0;
+    }
+
+    .address-contact-info {
+      display: none;
+    }
+
+    .h5-address-contact-info {
+      height: 17px;
+      font-size: 14px;
+      font-family: Inter-Regular, Inter;
+      font-weight: 400;
+      color: #828282;
+      line-height: 16px;
+    }
+
+    .address,
+    .contact-info {
+      font-size: 14px;
+    }
+
+    // 板块
+    .personal-wditor-right-plate {
+      margin-top: 16px;
+      margin-bottom: 16px;
+
+      .n-button {
+        padding: 6px 16px;
+      }
+    }
+
+    // 用户资料
+    .user-experience {
+      margin-top: 0;
+      display: block;
+
+      .open-to-Job {
+        width: 103px;
+        height: 19px;
+        font-size: 16px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 19px;
+      }
+
+      .user-experience-txt {
+        width: calc(100% - 40px);
+        height: 17px;
+        font-size: 14px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #333333;
+        line-height: 16px
+      }
+
+      .see-all-details {
+        width: 94px;
+        height: 17px;
+        font-size: 14px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #0A66C2;
+        line-height: 16px;
+      }
+
+      .user-experience-left {
+        height: 90px;
+        padding: 16px;
+        margin-bottom: 10px;
+      }
+
+      .user-experience-left,
+      .user-experience-right {
+        width: 100%;
+      }
+
+      .h5-user-experience-edit-img {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+      }
+
+      .user-experience-right {
+        height: 89px;
+      }
+
+      .share-your-profile {
+        height: 19px;
+        font-size: 16px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 19px;
+      }
+
+      .get-started {
+        height: 17px;
+        font-size: 14px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #0A66C2;
+        line-height: 16px;
+      }
+    }
+
+
+    .h5-suggested-for-you {
+
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .personal-wditor-center-02 {
+        padding: 0;
+      }
+
+      .suggested-for-you {
+        margin-top: 0;
+      }
+    }
+
+    // 建议给你
+    .suggested-for-you {
+      .suggested-for-you-title {
+        width: 196px;
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      .private-to-you {
+        height: 17px;
+        font-size: 14px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #828282;
+        line-height: 16px;
+      }
+
+      .intermediate {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .completion-degree {
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+
+    .complete-steps {
+      height: 18px;
+      font-size: 15px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      color: #333333;
+      line-height: 18px;
+    }
+
+    .all-star {
+      width: 263px;
+      height: 18px;
+      font-size: 15px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      line-height: 18px;
+      color: #0A66C2;
+    }
+
+    // 学校和工作经历
+    .school-and-Job-experience {
+      display: block;
+
+      .add-school {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+
+      .add-school-title {
+        width: 236px;
+        height: 48px;
+        font-size: 16px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 24px;
+      }
+
+      .add-school-txt {
+        display: none;
+      }
+
+      .h5-add-school-txt {
+        display: block;
+      }
+
+      .school-and-Job-experience-item-txt {
+        margin-top: 10px;
+        margin-bottom: 16px;
+        height: 39px;
+        font-size: 13px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #828282;
+        line-height: 20px;
+      }
+
+      .add-a-summary {
+        width: 156px;
+        height: 38px;
+        border-radius: 22px 22px 22px 22px;
+        opacity: 1;
+        border: 1px solid #535353;
+      }
+    }
+
+    .school-and-Job-experience {
+      height: 100%;
+    }
+
+    // 分析
+    .add-Job-experience {
+      padding: 16px;
+
+      .personal-wditor-center-02 {
+        padding: 0;
+      }
+
+      .add-a-summary {
+        width: 165px;
+        height: 38px;
+        border-radius: 22px 22px 22px 22px;
+        opacity: 1;
+        border: 1px solid #535353;
+      }
+    }
+
+    .analytics {
+      margin-top: 36px;
+
+      .personal-wditor-center-02 {
+        padding: 0;
+      }
+
+      .analytics-title {
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+      }
+
+      .analytics-private-to-you {
+        height: 17px;
+        font-size: 14px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #333333;
+        line-height: 16px;
+        margin-top: 11px;
+        margin-bottom: 14px;
+      }
+
+      .profile-views {
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .update-profile {
+        width: 239px;
+        height: 16px;
+        font-size: 13px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+        line-height: 15px;
+      }
+    }
+
+    .resources {
+      margin-top: 36px;
+      margin-bottom: 0;
+
+      .personal-wditor-center-02 {
+        padding: 0;
+      }
+
+      .analytics-title {
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+      }
+
+      .analytics-private-to-you {
+        margin-top: 14px;
+        margin-bottom: 16px;
+      }
+
+      .profile-views {
+        font-size: 21px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 25px;
+        margin-bottom: 6px;
+      }
+
+      .resources-state {
+        width: 50px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+      }
+
+      .h5-update-profile {
+        height: 39px;
+        font-size: 13px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+        line-height: 20px;
+      }
+    }
+
+    .personal-strength {
+      .personal-wditor-center-02 {
+        padding: 0;
+      }
+
+      .personal-strength-title {
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+        margin-bottom: 11px;
+      }
+
+      .i-m-john-smith {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #333333;
+        line-height: 14px;
+        margin-top: 0;
+      }
+    }
+
+    .Job-experience {
+      .personal-wditor-center-02 {
+        margin-top: 36px;
+      }
+
+      .personal-strength-title {
+        height: 31px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+        margin-bottom: 16px;
+      }
+
+      .ux-analyst-title {
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .personal-strength-address {
+        margin-top: 6px;
+        margin-bottom: 10px;
+        height: 28px;
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+        line-height: 28px;
+      }
+
+      .year-to-year {
+        height: 28px;
+        font-size: 13px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #828282;
+        line-height: 28px;
+        margin-bottom: 16px;
+      }
+
+      .Job-content {
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .Job-content-item {
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+      }
+
+      .Job-performancei-title {
+        margin-top: 27px;
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .Job-performancei-item {
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+      }
+
+      .skills-title {
+        margin-top: 16px;
+        height: 28px;
+        font-size: 15px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 28px;
+      }
+
+      .skills-item {
+        .n-button {
+          width: 79px;
+          height: 37px;
+          background: #327548;
+          border-radius: 23px 23px 23px 23px;
+          opacity: 1;
+        }
+
+      }
+    }
+
+    .project-experience {
+      .personal-strength-title {
+        margin-top: 36px;
+        height: 31px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+        margin-bottom: 0;
+      }
+
+      .project-experience-operation-edit-delete {
+        display: flex;
+        top: 2px;
+        right: 19px;
+      }
+
+      .year-to-year {
+        height: 28px;
+        font-size: 13px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #828282;
+        line-height: 28px;
+        margin-bottom: 16px;
+      }
+
+      .Job-performancei-item {
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+      }
+    }
+
+    .sss {
+      height: 27px;
+      font-size: 22px;
+      font-family: Inter-Semi Bold, Inter;
+      font-weight: normal;
+      color: #000000;
+      line-height: 26px;
+    }
+  }
+
+  .personal-strength {
+
+    .operation-edit-delete {
+      top: 35px;
+      right: 19px;
+      display: flex;
+    }
+
+    .edit-img {
+      width: 28px;
+      height: 28px;
+      right: 0px;
+      top: 14px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .add-school-title {
+    display: none;
+  }
+
+  .h5-add-school-title {
+    display: block;
+    height: 72px;
+    font-size: 16px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #000000;
+    line-height: 24px;
+  }
+
+  .school-and-Job-experience-item-txt {
+    display: none;
+  }
+
+  .h5-school-and-Job-experience-item-txt {
+    height: 39px;
+    font-size: 13px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #828282;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .update-profile {
+    display: none;
+  }
+
+  .h5-update-profile {
+    display: block;
+  }
+  .h5-personal-strength-address {
+    height: 28px;
+    font-size: 14px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #333333;
+    line-height: 28px;
+    display: block;
+  }
+  .personal-strength-address {
+    display: none;
+  }
+  .personal-wditor-right {
+    .education {
+
+      .operation {
+        right: 2px;
+        display: flex !important;
+
+        img {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+  }
+
+  .personal-wditor-right .skill-dom .skill-title,
+  .personal-wditor-right .interests .interests-title {
+    margin-bottom: 16px;
+  }
+
+  .personal-wditor-right .personal-strength .personal-strength-title {
+    padding: 26px 0 26px 0;
+    font-size: 22px;
+    display: flex;
+  }
+  .personal-wditor-right .personal-strength .custom-item-subject {
+    height: 84px;
+  }
+
+  .personal-wditor-right .dream-position .dream-position-item {
+    font-size: 16px;
+    font-family: Inter-Semi Bold, Inter;
+    font-weight: normal;
+    color: #333333;
+  }
+
+  .personal-wditor-right .custom-item .custom-item-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 21px;
+    font-size: 17px;
+    font-family: Inter-Medium, Inter;
+    font-weight: 500;
+    color: #000000;
+    line-height: 20px;
+  }
+
+  .personal-wditor-right .custom-item .custom-item-item {
+    margin-top: 16px;
+    width: 100%;
+    left: 0;
+    padding-left: 0;
+  }
+
+  .h5-operation {
+    .h5-operation-edit-delete {
+      display: flex;
+    }
+  }
+
+  .h5-camera-img02 {
+    display: block;
+  }
+
+  .h5-personal-strength {
+    margin-top: 22px;
+    margin-bottom: 16px;
+
+    .personal-strength-title {
+      margin-bottom: 11px;
+    }
+
+    .operation {
+      top: -4px;
+    }
+
+    .operation-edit-delete {
+      right: 20px;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  .ux-analyst-title {
+  }
+
+  .h5-space {
+    position: relative;
+    left: -20px;
+    width: calc(100% + 40px);
+    border-top: 9px solid #F4F2F0;
+    margin-top: 16px;
+  }
+
+  .resum-preview {
+    width: 100vw;
+    height: 100vh;
+    position: static;
+    transform: translateX(0);
+
+    .resum-preview-content-item {
+      display: block;
+      //position: relative;
+    }
+
+    .preview-head {
+      margin-bottom: 25px;
+    }
+
+    .resum-preview-main {
+      width: 100vw;
+      padding-right: 35px;
+      padding-left: 35px;
+      padding-bottom: 52px;
+      overflow: hidden;
+    }
+
+    .avatar {
+      //width: calc(100% + 16px);
+      width: 375px;
+      position: relative;
+      right: 16px;
+      overflow: hidden;
+
+      .avatar-img {
+        width: 124px;
+        height: 178px;
+        border-radius: 0px 16px 0px 16px;
+        opacity: 1;
+        border: 2px solid #0A66C2;
+        margin-right: 24px;
+      }
+
+      .avatar-title {
+        width: 74px;
+        height: 58px;
+        font-size: 26px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 29px;
+      }
+
+      .ux-analyst {
+        width: 123px;
+        height: 15px;
+        font-size: 12px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #333333;
+        line-height: 14px;
+        margin-top: 2px;
+        margin-bottom: 4px;
+      }
+
+      .address {
+        height: 12px;
+        font-size: 10px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #828282;
+        line-height: 12px;
+      }
+
+      .personal-strength {
+        width: 104px;
+        height: 15px;
+        font-size: 12px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 14px;
+        margin-top: 5px;
+        margin-bottom: 12px;
+      }
+
+      .name {
+        width: 191px;
+        height: 46px;
+        font-size: 10px;
+        font-family: Inter-Regular, Inter;
+        font-weight: 400;
+        color: #333333;
+        line-height: 11px;
+      }
+    }
+
+    .resum-preview-content {
+      margin-top: 40px;
+
+      .education {
+        height: 424px;
+
+        .education-title {
+          width: 107px;
+          height: 27px;
+          font-size: 22px;
+          font-family: Inter-Semi Bold, Inter;
+          font-weight: normal;
+          color: #000000;
+          line-height: 26px;
+        }
+
+        .education-item {
+          margin-top: 30px;
+        }
+
+        .education-years-years {
+          height: 28px;
+          font-size: 13px;
+          font-family: Inter-Medium, Inter;
+          font-weight: 500;
+          color: #828282;
+          line-height: 28px;
+        }
+
+        .education-boston-university {
+          height: 21px;
+          font-size: 17px;
+          font-family: Inter-Medium, Inter;
+          font-weight: 500;
+          color: #000000;
+          line-height: 20px;
+        }
+
+        .education-bachelors-degree {
+          width: 162px;
+          height: 56px;
+          font-size: 14px;
+          font-family: Inter-Medium, Inter;
+          font-weight: 500;
+          color: #333333;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .Job-experience {
+      margin-left: 0;
+    }
+
+    .Job-experience {
+      width: 304px;
+      height: 960px;
+
+      .Job-experience-title {
+        width: 180px;
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+      }
+
+      .Job-experience-years-years {
+        height: 28px;
+        font-size: 13px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #828282;
+        line-height: 28px;
+      }
+
+      .Job-experience-ux-analyst {
+        width: 192px;
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .Job-experience-address {
+        width: 244px;
+        height: 56px;
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+        line-height: 28px;
+      }
+
+      .Job-experience-item-title {
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+        margin-bottom: 7px;
+      }
+
+      .Job-experience-item-item {
+        width: 224px;
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+        line-height: 28px;
+      }
+    }
+
+    .education {
+      padding: 50px 48px;
+    }
+
+    .skill {
+      position: static;
+
+      .skill-title {
+        width: 45px;
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+        margin-bottom: 73px;
+      }
+
+      .personal-strength-label {
+        padding: 0;
+      }
+
+    }
+
+    .dream-position {
+      .dream-position-title {
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+        margin-bottom: 56px;
+      }
+
+      .ux-analyst {
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .dream-positionItem-item {
+        font-size: 15px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #333333;
+        line-height: 28px;
+      }
+
+      .center-item-txt {
+
+      }
+    }
+
+    .interests {
+      position: absolute;
+      top: 1368px
+    }
+
+    .project-experience {
+      margin-bottom: 843px;
+    }
+
+    .itme-center {
+      left: -26px;
+      bottom: -833px;
+      width: 304px;
+      height: 470px;
+      background: linear-gradient(#F8F3FF 0%, #FFF3F3 100%);
+      opacity: 1;
+
+      .title {
+        height: 27px;
+        font-size: 22px;
+        font-family: Inter-Semi Bold, Inter;
+        font-weight: normal;
+        color: #000000;
+        line-height: 26px;
+      }
+
+      .custom-item-item-title {
+        height: 21px;
+        font-size: 17px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+      }
+
+      .custom-item-item-txt {
+        width: 224px;
+        height: 112px;
+        font-size: 14px;
+        font-family: Inter-Medium, Inter;
+        font-weight: 500;
+        color: #333333;
+        line-height: 28px;
+      }
+    }
+
+    .url {
+      width: 100vw;
+      position: relative;
+      right: 35px;
+      flex-direction: column;
+      text-align: center;
+
+      .powered-by {
+        justify-content: center;
+        margin-top: 19px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .flower-text-img {
+    display: none;
+  }
+
+  .h5-flower-text-img {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 244px;
+    z-index: 30;
+  }
+
+  .resum-preview .selector:after {
+    top: 14px;
+  }
+
+  .resum-preview .selector:after {
+    top: 40px;
+  }
+
+  .avatar .selector:after {
+    top: 14px;
+  }
+
+  .download-resum-preview, .preview-head {
+    display: none;
+  }
+
+  .h5-download-resum-preview {
+    display: block;
+    text-align: center;
+  }
+
+  .h5-preview-head {
+    width: 50%;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+
+    .h5-preview {
+      margin-left: 103px;
+    }
+  }
+
+  .is-public {
+    display: none;
+  }
+  .plate-five {
+    padding: 20px 0 0;
+    border: 0;
+    margin-bottom: 32px;
+
+    .four-time-content {
+      margin-bottom: 10px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      color: #616161;
+      line-height: 28px;
+    }
+
+    .four-title, .four-title-four, .four-subtitle {
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .plate-title-five {
+      width: calc(100% - 80px);
+    }
+
+    .content-two {
+      font-size: 14px;
+    }
+
+    .four-title-three {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .four-haed {
+      display: block;
+      padding-bottom: 0;
+    }
+
+    .seven-title {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .four-title-four {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .plate-item {
+    .plate-title-three {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .union-img {
+      img {
+        position: relative;
+        right: 2px;
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .plate-item-title {
+      padding: 32px 0;
+      font-size: 22px;
+    }
+
+    .plate-subtitle {
+      padding: 32px 0;
+      font-size: 22px;
+    }
+
+    .plate-subtitle-right {
+      height: 28px;
+      font-size: 14px;
+      font-family: Inter-Medium, Inter;
+      font-weight: 500;
+      color: #828282;
+      line-height: 28px;
+      margin-left: 0;
+    }
+
+
+    .plate-title-two {
+      line-height: 26px;
+      padding-top: 22px;
+      padding-bottom: 16px;
+      font-size: 22px;
+    }
+  }
+  .skills-item-btn {
+    padding: 6px 15px;
+    font-size: 17px;
+
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .ba-02 {
+    margin: 0;
+  }
+  .personal-wditor-right .custom-item .operation {
+    right: -1px;
+    top: 20px;
+    display: flex;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .personal-wditor-right .operation {
+    display: flex !important;
+    right: 2px;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  :deep(.el-checkbox.el-checkbox--large .el-checkbox__inner) {
+    width: 20px;
+    height: 20px;
+  }
+  :deep(.el-checkbox.el-checkbox--large .el-checkbox__label) {
+    font-size: 18px;
+  }
+  :deep(.el-checkbox__inner::after) {
+    left: 7px;
+    top: 3px;
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner::after {
+    transform: rotate(43deg) scaleY(1.5);
+  }
+
+  .personal-wditor-right .education .education-space {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .project-experience {
+    .four-title-four {
+      margin-top: 24px;
+    }
+
+    .four-time-content {
+      margin-bottom: 24px;
+    }
+  }
+  .plate-item .plate-title-four {
+    font-size: 17px;
+  }
+
+  .four-secondary-content {
+    font-size: 16px !important;
+  }
+  .four-subtitle {
+    font-size: 18px !important;
+  }
+}
