@@ -1,65 +1,70 @@
-# Description of the ShareVC Project
-[中文版](https://github.com/engineerrep/share-cv/blob/main/README_CN.md))|English
+# ShareVC项目说明
+中文版|[English](https://github.com/engineerrep/share-cv/blob/main/README.md)
 
-## 1.Project Introduction
-### 1.1Project Overview
-ShareCV is an open source web application that integrates Vue.js 3, Nuxt.js and Golang. It aims to provide an efficient and convenient online resume creation and sharing platform to seamlessly connect users and recruiters. ShareCV has strong scalability and security, and provides a simple and easy-to-use user interface. On ShareCV, users can quickly create and share personal resumes, show their skills, experience and accomplishments. Whether students or professionals, anyone can create visually appealing and interactive resumes on ShareCV to demonstrate their professionalism and competitiveness.
-### 1.2Project Features
-- It has a user-friendly interface for users to quickly create and edit resumes  
-- It provides multiple resume templates for users to choose from according to their needs and preferences  
-- It introduces a rich text editor for users to easily format the resume content  
-- It has interactive sections for skills, education, work experience, etc., colorful and intuitive to help users better present themselves  
-- Real-time preview allows users to view changes to the resume at any time, convenient for modifications and adjustments  
-- Easily share your resume with a unique URL, convenient and quick to share your resume with others and recruiters  
-- Responsive design provides the best browsing experience on different devices, allowing users to view and edit their resumes on any device.
-### 1.3Technologies Used in the Project
-- Vue.js 3: A progressive JavaScript framework for building user interfaces.  
-- Nuxt.js: A Vue.js-based framework for server-side rendering applications, which can help us quickly build efficient and maintainable applications.    
-- Golang: A statically typed compiled language for building efficient and scalable backend applications.  
-- Vue Router: A library for managing client-side routing in Vue.js applications, which can help us easily build single-page applications.  
-- Vuex: The state management pattern and library for Vue.js applications, which allows us to manage application state more easily.   
-- Tailwind CSS: A utility-first CSS framework that can help us quickly build custom user interfaces.  
-- PostgreSQL: A powerful open source relational database management system that helps us store and manage application data.
+## 1.项目简介
+### 1.1项目概述
+ShareCV 是一个集 Vue.js 3、Nuxt.js 和 Golang 于一身的开源网络应用。旨在提供一套高效便捷的在线简历创作和分享平台，将用户和招聘者无缝连接。ShareCV 具有强大的可扩展性和安全性，并提供简单易用的用户界面。在 ShareCV 上，用户可以快速创建和分享个人简历，并展示自己的技能、经验和成就。无论是学生还是工作人士，都可以通过 ShareCV 创建出视觉吸引人、交互性强的简历，以此展示自己的专业素养和竞争力。
+### 1.2项目特点
+- 具有用户友好的界面，便于用户快速创建和编辑简历
+- 提供多种简历模板可供选择，使得用户可以根据自己的需要和喜好随意进行选择
+- 引入富文本编辑器，用户可方便地格式化简历内容
+- 具有交互式的技能、教育、工作经历等部分，丰富多彩、直观易懂，帮助用户更好地展示自己
+- 实时预览，用户可以随时查看修改后的简历效果，方便进行更改和调整
+- 通过唯一的 URL 轻松分享您的简历，方便快捷地将自己的简历分享给他人和招聘单位
+- 具有响应式设计，适配不同设备的最佳浏览体验，方便用户在任何设备上查看和编辑自己的简历。
+### 1.3项目使用的技术
+- Vue.js 3: 一种渐进式 JavaScript 框架，用于构建用户界面。
+- Nuxt.js: 基于 Vue.js 的服务端渲染应用框架，可以帮助我们快速搭建高效且易于维护的应用程序。
+- Golang: 一种静态类型编译语言，用于构建高效可扩展的后端应用程序。
+- Vue Router：一种用于管理 Vue.js 应用程序客户端路由的库，可以帮助我们轻松地构建单页应用程序。
+- Vuex：Vue.js 应用程序的状态管理模式和库，使得我们可以更轻松地管理应用程序的状态。
+- Tailwind CSS：一个实用型 CSS 框架，可帮助我们快速构建自定义用户界面。
+- PostgreSQL：一种强大的开源关系型数据库管理系统，可帮助我们存储和管理应用程序的数据。
 
-## 2.Started Quickly
+## 2.快速开始
 
-To run and deploy ShareCV, please follow these steps:
+要运行和部署 Share-CV，请按照以下步骤操作：
 
-1. Clone the repository: Use the command line tool to enter git clone[https://github.com/engineerrep/share-cv.git](https://github.com/engineerrep/share-cv.git)to clone the project code locally. 
-2. Enter the share-cv directory: Use the command line tool to enter cd share-cv to enter the project directory.3.
-3.  Script build: Use the command line tool to enter sh[build.sh](http://build.sh/)in the project directory to wait for the build to complete. 
-4.  Start directly: Use the command line tool to enter npm run dev in the project directory to start the application. 
-5.  Server release: Use the command line tool to enter sh[deploy.sh](http://deploy.sh/)in the project directory to deploy the project to the server. 
-6.  Golang backend contact us: If you need to obtain the Golang backend code or need more help with the Golang backend, please send an email to[engineerrep@gmail.com](mailto:engineerrep@gmail.com). Our team will provide free support and do our best to solve your problems.
+1. 克隆仓库：使用命令行工具，输入 git clone [https://github.com/engineerrep/share-cv.git](https://github.com/engineerrep/share-cv.git%EF%BC%8C%E5%B0%86%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E5%85%8B%E9%9A%86%E5%88%B0%E6%9C%AC%E5%9C%B0%E3%80%82)将项目代码克隆到本地。
+
+2. 进入 share-cv 目录：使用命令行工具，输入 cd share-cv，进入项目目录。
+
+3. 脚本构建：使用命令行工具，在项目目录下输入进入 sh build.sh，等待构建完成。
+
+4. 直接启动：使用命令行工具，在项目目录下输入 npm run dev，启动应用程序。
+
+5. 服务器发布：使用命令行工具，在项目目录下输入 sh deploy.sh，将项目发布到服务器。
+
+6. Golang 后端联系我们：如果您需要获取 Golang 后端代码或需要得到更多关于 Golang 后端的帮助，请发送电子邮件至[engineerrep@gmail.com](mailto:engineerrep@gmail.com)，我们的团队将提供免费支持并尽力解决您的问题。
 
 
-## 3.Contribution Guide
-Welcome everyone to contribute! ShareVC is an open source project, thanks for your enthusiasm and support. This project follows the[MIT License](https://github.com/engineerrep/share-cv/blob/main/LICENSE).
-### 3.1When contributing, please follow these guidelines:
+## 3.贡献指南
+欢迎大家参与贡献！ShareVC 是一个开源项目，感谢各位的热情支持。本项目遵循[ MIT 许可证](https://github.com/engineerrep/share-cv/blob/main/LICENSE)。
+### 3.1在参与贡献时，请您遵守以下指南:
 
-
- Before making any changes, please read our open source license and contribution guidelines. Only contributions that conform to the[MIT License](https://github.com/engineerrep/share-cv/blob/main/LICENSE)will be accepted.
- We encourage you to first submit an Issue on GitHub and discuss with us to avoid unnecessary work and unconstructive changes. Once a change proposal is accepted, you can make changes by sending a pull request:
- - Please make sure all changes are covered by tests to ensure there are no unexpected behavioral changes. Test cases should be included in your pull request. 
- - Please describe your changes in detail and submit high quality and easy to understand pull requests. We will review carefully and ask questions and request changes if necessary.
- - Improvements and revisions to the documentation are welcome. The documentation is also included in this project and maintained along with the source code.
+在进行任何更改之前，请阅读我们的开源许可证及贡献指南。只接受符合[MIT许可证](https://github.com/engineerrep/share-cv/blob/main/LICENSE)的贡献。  
+我们鼓励您首先在GitHub上提交Issue并与我们讨论，以避免不必要的工作和非建设性的更改。一旦更改建议被接受，您可以通过发送拉取请求来进行更改：  
+- 请确保所有的更改都被测试覆盖，以确保不会出现意外的行为变化。测试用例应在您的拉取请求中包含。   
+- 请详细说明您的更改，提交高质量且易于理解的提拉取请求。我们会仔细审查并在必要时提出问题和请求更改。   
+- 欢迎对文档进行改进和修订。文档也包含在本项目中，与源代码一起维护。
  
  
  
-### 3.2Asking Questions and Reporting Bugs  
-If you have any questions or encounter any errors while using the application, please submit an Issue on GitHub. Please describe your problem in detail and provide screenshots or error logs (if any) to help us understand and diagnose the problem.
-### 3.3Feature Requests and Change Suggestions   
-If you have any feature requests or suggestions for changes, please submit an Issue on GitHub explaining your idea and rationale. We welcome and encourage community participation to improve and optimize the application together.。
+### 3.2提问和提交Bug报告  
+如果您在使用应用程序的过程中遇到任何疑问或错误，请在 GitHub中提交Issue。请详细说明您遇到的问题，并提供截屏或错误日志(如果有)以帮助我们理解和诊断问题。
+### 3.3功能请求和变更建议   
+如果您有任何功能请求或变更建议，请在GitHub提交Issue说明您的想法及理由。我们欢迎和鼓励社区参与，与我们一起改进和优化应用程序。
 
-## 4.License
-ShareCV is released under the[MIT License](https://github.com/engineerrep/share-cv/blob/main/LICENSE).
+## 4.许可证
+ShareCV 使用[MIT 许可证](https://github.com/engineerrep/share-cv/blob/main/LICENSE)发布。
 
-## 5.Acknowledgments
-We would like to thank the following projects and resources that made the development of ShareCV possible:
+## 5.鸣谢
+我们要感谢以下项目和资源，它们使得 ShareCV 的开发成为可能：
 
 - Vue.js：[https://vuejs.org](https://vuejs.org/)
 - Nuxt.js：[https://nuxtjs.org](https://nuxtjs.org/)
 - Golang：[https://golang.org](https://golang.org/)
 - Vue Router：[https://router](https://router/)
-## 6.Contact Us
-Thank you for your support of the ShareVC project. If you have any questions, please contact us through GitHub Issues or by email [engineerrep@gmail.com](mailto:engineerrep@gmail.com).
+
+## 6.联系我们
+感谢您对 ShareVC 项目的支持。如有任何疑问,请通过 GitHub Issues 或通过电子邮件[engineerrep@gmail.com](mailto:engineerrep@gmail.com)与我们联系。
