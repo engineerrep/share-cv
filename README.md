@@ -63,7 +63,7 @@ ShareCV 使用[MIT 许可证](https://github.com/engineerrep/share-cv/blob/main/
 - Nuxt.js：[https://nuxtjs.org](https://nuxtjs.org/)
 - Golang：[https://golang.org](https://golang.org/)
 - Vue Router：[https://router](https://router/)
-## 5.联系我们
+## 6.联系我们
 感谢您对 ShareVC 项目的支持。如有任何疑问,请通过 GitHub Issues 或通过电子邮件[engineerrep@gmail.com](mailto:engineerrep@gmail.com)与我们联系。
 
 :::
