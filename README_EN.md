@@ -61,5 +61,5 @@ We would like to thank the following projects and resources that made the develo
 - Nuxt.js：[https://nuxtjs.org](https://nuxtjs.org/)
 - Golang：[https://golang.org](https://golang.org/)
 - Vue Router：[https://router](https://router/)
-## 5.Contact Us
+## 6.Contact Us
 Thank you for your support of the ShareVC project. If you have any questions, please contact us through GitHub Issues or by email [engineerrep@gmail.com](mailto:engineerrep@gmail.com).
