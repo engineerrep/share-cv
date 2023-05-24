@@ -1,4 +1,4 @@
-# ShareVC Project Description
+# ShareVC Project Introduction
 English | [中文版](https://github.com/engineerrep/share-cv/blob/main/README_CN.md)
 
 ## 1. Project Overview
