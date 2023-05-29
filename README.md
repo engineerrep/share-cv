@@ -58,7 +58,7 @@ We would like to thank the following projects and resources that made the develo
 - Vue Router: https://router
 
 ## 6. Contact Us
-Thank you for your support of the ShareVC project. If you have any questions, please contact us through GitHub Issues or email us at engineerrep@gmail.com.
+Thank you for your support of the ShareCV project. If you have any questions, please contact us through GitHub Issues or email us at engineerrep@gmail.com.
 
 ## 7. Privacy Policy
 We value user privacy very much and may collect some data activity information such as contributors, download volume, activity level, etc., to better understand the use of the project and improve it. However, we will not collect specific user information such as name, email address, IP address, etc. We promise to protect user privacy and will not disclose personal information to third parties. If you have any questions or concerns about our privacy policy, please contact us at engineerrep@gmail.com.
