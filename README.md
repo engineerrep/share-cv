@@ -1,4 +1,4 @@
-# ShareVC Project Introduction
+# ShareCV Project Introduction
 English | [中文版](https://github.com/engineerrep/share-cv/blob/main/README_CN.md)
 
 ## 1. Project Overview
@@ -32,7 +32,7 @@ To run and deploy Share-CV, follow these steps:
 6. Contact us for Golang backend: If you need to obtain the Golang backend code or need more help with the Golang backend, please send an email to engineerrep@gmail.com, and our team will provide free support and try our best to solve your problem.
 
 ## 3. Contribution Guidelines
-We welcome your contribution to ShareVC, an open-source project, and appreciate your enthusiastic support. This project follows the MIT License. 
+We welcome your contribution to ShareCV, an open-source project, and appreciate your enthusiastic support. This project follows the MIT License. 
 ### 3.1 Please follow these guidelines when contributing:
 Before making any changes, please read our open-source license and contribution guidelines. Contributions will only be accepted if they comply with the MIT License. 
 We encourage you to submit issues on GitHub and discuss with us to avoid unnecessary work and non-constructive changes. Once the proposed changes are accepted, you can make changes by sending a pull request: 
