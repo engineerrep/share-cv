@@ -1,4 +1,4 @@
-# ShareVC项目说明
+# ShareCV项目说明
 [English](https://github.com/engineerrep/share-cv/blob/main/README.md)|中文版
 
 ## 1.项目简介
@@ -39,7 +39,7 @@ ShareCV 是一个集 Vue.js 3、Nuxt.js 和 Golang 于一身的开源网络App�
 
 
 ## 3.贡献指南
-欢迎大家参与贡献！ShareVC 是一个开源项目，感谢各位的热情支持。本项目遵循[ MIT 许可证](https://github.com/engineerrep/share-cv/blob/main/LICENSE)。
+欢迎大家参与贡献！ShareCV 是一个开源项目，感谢各位的热情支持。本项目遵循[ MIT 许可证](https://github.com/engineerrep/share-cv/blob/main/LICENSE)。
 ### 3.1在参与贡献时，请您遵守以下指南:
 
 在进行任何更改之前，请阅读我们的开源许可证及贡献指南。只接受符合[MIT许可证](https://github.com/engineerrep/share-cv/blob/main/LICENSE)的贡献。  
@@ -67,7 +67,7 @@ ShareCV 使用[MIT 许可证](https://github.com/engineerrep/share-cv/blob/main/
 - Vue Router：[https://router](https://router/)
 
 ## 6.联系我们
-感谢您对 ShareVC 项目的支持。如有任何疑问,请通过 GitHub Issues 或通过电子邮件[engineerrep@gmail.com](mailto:engineerrep@gmail.com)与我们联系。
+感谢您对 ShareCV 项目的支持。如有任何疑问,请通过 GitHub Issues 或通过电子邮件[engineerrep@gmail.com](mailto:engineerrep@gmail.com)与我们联系。
 
 ## 7.隐私政策
 
