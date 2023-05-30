@@ -1,9 +1,21 @@
 # ShareCV Project Introduction
 English | [中文版](https://github.com/engineerrep/share-cv/blob/main/README_CN.md)
 
+#### We offer free backend support unless you ask for customized features. If you are a front-end engineer, you can get this android app up running in a few hours and for free.
+
+#### Please contact us through GitHub Issues or by email at [engineerrep@gmail.com](mailto:engineerrep@gmail.com).
+
 ## 1. Project Overview
 ### 1.1 Project Summary
-ShareCV is an APP that combines Vue.js 3, Nuxt.js, and Golang. It aims to provide an efficient and convenient online platform for resume creation and sharing, seamlessly connecting users and recruiters. ShareCV is highly scalable and secure, with a user-friendly interface. On ShareCV, users can quickly create and share their personal resumes, showcasing their skills, experience, and achievements. Whether you are a student or a working professional, ShareCV allows you to create visually appealing and highly interactive resumes to demonstrate your professional competence and competitiveness.
+ShareCV is an APP that combines Vue.js 3, Nuxt.js, and Golang. 
+
+It aims to provide an efficient and convenient online platform for resume creation and sharing, seamlessly connecting users and recruiters. 
+
+ShareCV is highly scalable and secure, with a user-friendly interface. 
+
+On ShareCV, users can quickly create and share their personal resumes, showcasing their skills, experience, and achievements. 
+
+Whether you are a student or a working professional, ShareCV allows you to create visually appealing and highly interactive resumes to demonstrate your professional competence and competitiveness.
 ### 1.2 Project Features
 - User-friendly interface for quick resume creation and editing
 - Multiple resume templates for users to choose from according to their needs and preferences
