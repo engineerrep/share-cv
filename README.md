@@ -1,5 +1,5 @@
 # ShareCV Project Introduction
-English | [中文版](https://github.com/engineerrep/share-cv/blob/main/README_CN.md)
+English | [中文版] (https://github.com/engineerrep/share-cv/blob/main/README_CN.md)
 
 #### We offer free backend support unless you ask for customized features. If you are a front-end engineer, you can get this android app up running in a few hours and for free.
 
