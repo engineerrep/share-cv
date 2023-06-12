@@ -1,0 +1,89 @@
+syntax = "v1"
+
+info(
+    title: "用户项目经验"
+    desc: "用户项目经验"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserProject {
+        Id 		            int64 `json:"id"` // 主键
+        ProjectName 	    string `json:"projectName"` // 项目经验名称
+        ProjectContent	    string `json:"projectContent"` // 项目经验内容
+        JobPosition	        string `json:"jobPosition"` // 工作职位
+        JobContent	        string `json:"jobContent"` // 工作内容
+        StartTime	        string `json:"startTime"` // 开始时间
+        EndTime     	    string `json:"endTime"` // 结束时间
+        ProjectLinkPlatform string `json:"projectLinkPlatform"` // 链接名称
+        ProjectLink	        string `json:"projectLink"` // 项目经验链接
+        ProjectSkills	    string `json:"projectSkills"` // 使用技能 多个用英文逗号分隔开
+        OrderBy	            int64 `json:"orderBy"` // 排序 从小到大的顺序
+    }
+    AddUserProjectReq {
+        Id 	                int64	`json:"id" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        ProjectName		    string	`json:"projectName" validate:"required,min=1,max=100" label:"项目经验名称"` // 项目经验名称 1-100
+        ProjectContent		string  `json:"projectContent" validate:"required,min=1,max=1000" label:"项目经验内容"` // 项目经验内容 1-1000
+        JobPosition		    string  `json:"jobPosition,optional" validate:"omitempty,min=0,max=100" label:"工作职位"` // 工作职位 0-100
+        JobContent		    string  `json:"jobContent,optional" validate:"omitempty,min=0,max=1000" label:"工作内容"` // 工作内容 0-1000
+        StartTime		    string  `json:"startTime" validate:"required,min=1,max=20" label:"开始时间"` // 开始时间 1-20
+        EndTime		        string  `json:"endTime,optional" validate:"omitempty,min=0,max=20" label:"结束时间"` // 结束时间 0-20
+        ProjectLinkPlatform string  `json:"projectLinkPlatform,optional" validate:"omitempty,min=0,max=30" label:"链接名称"` // 链接名称 0-30
+        ProjectLink		    string  `json:"projectLink,optional" validate:"omitempty,min=0,max=500" label:"项目经验链接"` // 项目经验链接 0-500
+        ProjectSkills		string  `json:"projectSkills,optional" validate:"omitempty,min=0,max=1000" label:"使用技能"` // 使用技能 0-1000 多个用英文逗号分隔开
+        OrderBy 	        int64	`json:"orderBy,optional" validate:"omitempty,gte=0" label:"排序"` // 排序 从小到大的顺序
+    }
+    DeleteUserProjectReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    UpdUserProjectSkillsReq {
+        Id              int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+        ProjectSkills   string  `json:"projectSkills" validate:"omitempty,min=0,max=1000" label:"使用技能"` // 使用技能 0-1000 多个用英文逗号分隔开
+    }
+    GetUserProjectReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    UserProjectResp {
+        List []UserProject `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : userproject
+    prefix : /api/user/project
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取项目经验"
+    )
+    @handler List
+    post /list returns (UserProjectResp)
+
+    @doc(
+        summary: "新增项目经验"
+    )
+    @handler Add
+    post /add (AddUserProjectReq) returns (IdResp)
+
+    @doc(
+        summary: "删除项目经验"
+    )
+    @handler Delete
+    post /delete (DeleteUserProjectReq) returns (StatusResp)
+
+    @doc(
+        summary: "修改项目经验技能"
+    )
+    @handler UpdProjectSkills
+    post /upd/skills (UpdUserProjectSkillsReq) returns (StatusResp)
+
+    @doc(
+        summary: "根据ID获取项目经验"
+    )
+    @handler Get
+    post /get (GetUserProjectReq) returns (UserProject)
+}

@@ -1,0 +1,69 @@
+syntax = "v1"
+
+info(
+    title: "用户教育"
+    desc: "用户教育"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserEducation {
+        Id 		            int64 `json:"id"` // 主键
+        OrganizationName 	string `json:"name"` // 学校或组织名称
+        StartTime	        string `json:"startTime"` // 开始时间
+        EndTime     	    string `json:"endTime"` // 结束时间
+        StudyAchievement    string `json:"content"` // 教育内容
+        OrderBy	            int64 `json:"orderBy"` // 排序 从小到大的顺序
+    }
+    AddUserEducationReq {
+        Id                  int64	`json:"id" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        OrganizationName    string	`json:"name" validate:"required,min=1,max=100" label:"组织名称"` // 学校或组织名称 1-100
+        StartTime           string  `json:"startTime" validate:"required,min=1,max=20" label:"入职时间"` // 开始时间 1-20
+        EndTime             string  `json:"endTime,optional" validate:"omitempty,min=0,max=20" label:"离职时间"` // 结束时间 0-20
+        StudyAchievement    string  `json:"content" validate:"required,min=1,max=500" label:"教育内容"` // 教育内容 1-500
+        OrderBy             int64	`json:"orderBy,optional" validate:"omitempty,gte=0" label:"排序"` // 排序 从小到大的顺序
+    }
+    DeleteUserEducationReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    GetUserEducationReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    UserEducationResp {
+        List []UserEducation `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : usereducation
+    prefix : /api/user/education
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取教育"
+    )
+    @handler List
+    post /list returns (UserEducationResp)
+
+    @doc(
+        summary: "新增教育"
+    )
+    @handler Add
+    post /add (AddUserEducationReq) returns (IdResp)
+
+    @doc(
+        summary: "删除教育"
+    )
+    @handler Delete
+    post /delete (DeleteUserEducationReq) returns (StatusResp)
+
+    @doc(
+        summary: "根据ID获取教育"
+    )
+    @handler Get
+    post /get (GetUserEducationReq) returns (UserEducation)
+}

@@ -1,0 +1,42 @@
+syntax = "v1"
+
+info(
+    title: "注册"
+    desc: "注册"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    RegisterEmailReq {
+        Email     		string  `json:"email" validate:"required,min=2,max=100" label:"邮箱"` // 邮箱 2-100
+        Code        	string  `json:"code" validate:"required,min=4,max=6" label:"验证码"` // 验证码 4-6
+        Password    	string  `json:"password" validate:"required,min=6,max=32" label:"密码"` // 密码 6-32
+        InvitationCode  string  `json:"invitationCode,optional" validate:"omitempty,min=9,max=10" label:"邀请码"` // 上级邀请码
+    }
+    CheckEmailReq {
+        Email     		string  `json:"email" validate:"required,min=2,max=100" label:"邮箱"` // 邮箱 2-100
+        GoogleCaptcha	string  `json:"googleCaptcha" validate:"required,min=6,max=2000" label:"谷歌验证Token"` // 谷歌验证Token
+    }
+)
+
+@server(
+    group : register
+    prefix : /api/register
+    middleware: PermAuth
+)
+
+service core-api {
+
+    @doc(
+        summary: "邮箱验证码+密码注册"
+    )
+    @handler RegisterEmail
+    post /email (RegisterEmailReq) returns (StatusResp)
+
+    @doc(
+        summary: "检测邮箱是否注册"
+    )
+    @handler CheckEmail
+    post /check/email (CheckEmailReq) returns (StatusResp)
+}

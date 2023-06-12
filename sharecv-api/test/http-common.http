@@ -1,0 +1,28 @@
+
+### 配置文件
+POST {{Host}}/api/config/info
+Content-Type: application/json
+Content-Language: en
+
+{
+
+}
+
+### 国家列表
+POST {{Host}}/api/common/country
+Content-Type: application/json
+Content-Language: en
+
+{
+
+}
+
+
+### 语言列表
+POST {{Host}}/api/common/language
+Content-Type: application/json
+Content-Language: en
+
+{
+
+}

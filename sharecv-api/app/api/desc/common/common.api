@@ -1,0 +1,54 @@
+syntax = "v1"
+
+info(
+	title: "公共"
+	desc: "公共"
+	author: "lab"
+	email: "sharecv@lab.com"
+)
+
+type (
+    Country {
+        Id          int64       `json:"id"`     // 国家ID
+        Code        string      `json:"code"`   // 国家代码
+        Num         string      `json:"num"`    // 国家区号
+        Name        string      `json:"name"`   // 国家
+    }
+    CountryListResp {
+        List []Country   `json:"list"`   // 国家集合
+    }
+)
+
+type (
+    Language {
+        Id          int64       `json:"id"`         // 语言ID
+        Code        string      `json:"code"`       // 语言简称
+        FullCode    string      `json:"fullCode"`   // 语言全称
+        CountryCode string      `json:"countryCode"`// 国家代码
+        Name        string      `json:"name"`       // 语言
+    }
+    LanguageListResp {
+        List []Language   `json:"list"`   // 语言集合
+    }
+)
+
+@server(
+	group : common
+	prefix : /api/common
+	middleware: PermAuth
+)
+
+service core-api {
+
+    @doc(
+		summary: "获取国家列表"
+	)
+	@handler GetCountryList
+	post /country returns (CountryListResp)
+
+    @doc(
+		summary: "获取语言列表"
+	)
+	@handler GetLanguageList
+	post /language returns (LanguageListResp)
+}

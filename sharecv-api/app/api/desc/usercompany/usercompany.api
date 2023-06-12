@@ -1,0 +1,91 @@
+syntax = "v1"
+
+info(
+    title: "用户工作经验"
+    desc: "用户工作经验"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserCompany {
+        Id 		            int64 `json:"id"` // 主键
+        CompanyName 	    string `json:"companyName"` // 工作经验名称
+        CompanyCountry	    string `json:"companyCountry"` // 工作经验国家
+        CompanyCity	        string `json:"companyCity"` // 工作经验城市
+        CompanyIndustry 	string `json:"companyIndustry"` // 工作经验行业
+        StartTime	        string `json:"startTime"` // 开始时间
+        EndTime     	    string `json:"endTime"` // 结束时间
+        JobPosition	        string `json:"jobPosition"` // 工作职位
+        JobContent	        string `json:"jobContent"` // 工作内容
+        JobSummary	        string `json:"jobSummary"` // 工作总结
+        JobSkills	        string `json:"jobSkills"` // 使用技能 多个用英文逗号分隔开
+        OrderBy	            int64 `json:"orderBy"` // 排序 从小到大的顺序
+    }
+    AddUserCompanyReq {
+        Id 	                int64	`json:"id" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        CompanyName		    string	`json:"companyName" validate:"required,min=2,max=200" label:"组织名称"` // 工作经验名称 2-200
+        CompanyCountry		string  `json:"companyCountry,optional" validate:"omitempty,min=0,max=100" label:"工作经验国家"` // 工作经验国家 0-100
+        CompanyCity		    string  `json:"companyCity,optional" validate:"omitempty,min=0,max=100" label:"工作经验城市"` // 工作经验城市 0-100
+        CompanyIndustry		string  `json:"companyIndustry,optional" validate:"omitempty,min=0,max=100" label:"工作经验行业"` // 工作经验行业 0-100
+        StartTime		    string  `json:"startTime" validate:"required,min=1,max=20" label:"开始时间"` // 开始时间 1-20
+        EndTime		        string  `json:"endTime,optional" validate:"omitempty,min=0,max=20" label:"结束时间"` // 结束时间 0-20
+        JobPosition		    string  `json:"jobPosition" validate:"required,min=1,max=100" label:"工作职位"` // 工作职位 1-100
+        JobContent		    string  `json:"jobContent" validate:"required,min=10,max=1000" label:"工作内容"` // 工作内容 10-1000
+        JobSummary		    string  `json:"jobSummary,optional" validate:"omitempty,min=0,max=1000" label:"工作总结"` // 工作总结 0-1000
+        JobSkills		    string  `json:"jobSkills,optional" validate:"omitempty,min=0,max=1000" label:"使用技能"` // 使用技能 0-1000 多个用英文逗号分隔开
+        OrderBy 	        int64	`json:"orderBy" validate:"omitempty,gte=0" label:"排序"` // 排序 从小到大的顺序
+    }
+    DeleteUserCompanyReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    UpdUserCompanySkillsReq {
+        Id          int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+        JobSkills   string  `json:"jobSkills" validate:"required,min=0,max=1000" label:"使用技能"` // 使用技能 0-1000 多个用英文逗号分隔开
+    }
+    GetUserCompanyReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    UserCompanyResp {
+        List []UserCompany `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : usercompany
+    prefix : /api/user/company
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取工作经验"
+    )
+    @handler List
+    post /list returns (UserCompanyResp)
+
+    @doc(
+        summary: "新增工作经验"
+    )
+    @handler Add
+    post /add (AddUserCompanyReq) returns (IdResp)
+
+    @doc(
+        summary: "删除工作经验"
+    )
+    @handler Delete
+    post /delete (DeleteUserCompanyReq) returns (StatusResp)
+
+    @doc(
+        summary: "修改工作经验技能"
+    )
+    @handler UpdJobSkills
+    post /upd/skills (UpdUserCompanySkillsReq) returns (StatusResp)
+
+    @doc(
+        summary: "根据ID获取工作经验"
+    )
+    @handler Get
+    post /get (GetUserCompanyReq) returns (UserCompany)
+}

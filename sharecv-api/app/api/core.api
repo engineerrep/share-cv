@@ -1,0 +1,27 @@
+syntax = "v1"
+
+info(
+	title: "sharecvapi"
+	desc: "sharecvapi"
+	author: "lab"
+	email: "sharecv@xxxxxx.com"
+	version: "v1.0.0"
+)
+
+import "desc/base.api"
+import "desc/oss/oss.api"
+import "desc/common/common.api"
+import "desc/config/config.api"
+import "desc/register/register.api"
+import "desc/account/account.api"
+import "desc/login/login.api"
+import "desc/web/web.api"
+import "desc/userbase/userbase.api"
+import "desc/uservideo/uservideo.api"
+import "desc/userphoto/userphoto.api"
+import "desc/usercompany/usercompany.api"
+import "desc/userexperience/userexperience.api"
+import "desc/uservolunteer/uservolunteer.api"
+import "desc/userproject/userproject.api"
+import "desc/usereducation/usereducation.api"
+import "desc/usercustomattribute/usercustomattribute.api"

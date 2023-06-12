@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  sharecvapi:
+    image: lab/sharecvapi:latest
+    container_name: sharecvapi
+    privileged: true
+    restart: always
+    ports:
+      - "6000:6000"
+    volumes:
+      - /data/sharecvapi/deploy:/app
+    networks:
+      app:
+        ipv4_address: 172.28.0.20
+
+networks:
+  app:
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
+    external: true

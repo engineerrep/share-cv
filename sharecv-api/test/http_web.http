@@ -1,0 +1,22 @@
+
+### 谷歌授权URL
+POST {{Host}}/api/web/google/auth/url
+Content-Type: application/json
+Content-Language: en
+
+{
+  "callbackURL": "http://localhost:3000/register"
+}
+
+### 谷歌登录
+POST {{Host}}/api/web/google/login
+Content-Type: application/json
+Content-Language: en
+
+{
+  "code": "xxxxxx",
+  "state": "sharecv",
+  "deviceId": "xxxxxx",
+  "browserName": "google",
+  "callbackURL": "http://sharecv.xxxxxx.com"
+}

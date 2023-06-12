@@ -1,0 +1,53 @@
+syntax = "v1"
+
+info(
+	title: "储存桶"
+	desc: "储存桶"
+	author: "lab"
+	email: "sharecv@lab.com"
+)
+
+type (
+    OssResp {
+        StatusCode int   `json:"StatusCode"`
+        ErrorCode string `json:"ErrorCode"`
+        ErrorMessage string `json:"ErrorMessage"`
+        AccessKeyId string `json:"AccessKeyId"`
+        AccessKeySecret string `json:"AccessKeySecret"`
+        SecurityToken string `json:"SecurityToken"`
+        Expiration string `json:"Expiration"`
+    }
+    OssUploadResp {
+        FilePath string  `json:"filePath"` // 文件路径
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : oss
+    prefix : /api/oss
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+		summary: "获取oss授权信息"
+	)
+	@handler OssAuthServer
+	get /auth/server returns (OssResp)
+}
+
+@server(
+    jwt: JwtAuth
+    group : oss
+    prefix : /api/oss
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "oss文件上传"
+    )
+    @handler OssUpload
+    post /upload returns (OssUploadResp)
+}

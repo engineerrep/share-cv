@@ -1,0 +1,100 @@
+syntax = "v1"
+
+info(
+	title: "登录"
+	desc: "登录"
+	author: "lab"
+	email: "sharecv@lab.com"
+)
+
+type (
+	LoginEmailCodeReq {
+		Email     		string  `json:"email" validate:"required,min=2,max=100" label:"邮箱"` // 邮箱 2-100
+		Code        	string  `json:"code" validate:"required,min=4,max=6" label:"验证码"` // 验证码 4-6
+		GoogleCaptcha	string  `json:"googleCaptcha" validate:"required,min=6,max=2000" label:"谷歌验证Token"` // 谷歌验证Token
+		DeviceId    	string  `json:"deviceId" validate:"required,min=10,max=100" label:"设备UUID"` // 设备UUID
+		AppVersion  	string  `json:"appVersion" validate:"required,min=1,max=15" label:"app版本"` // appVersion
+		SystemVersion	string  `json:"systemVersion" validate:"required,min=1,max=15" label:"system版本"` // systemVersion
+		Platform    	int64   `json:"platform" validate:"required,gte=0,lte=15" label:"登录平台"` // 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac
+	}
+	LoginEmailPasswordReq {
+		Email     		string  `json:"email" validate:"required,min=2,max=100" label:"账号"` // 邮箱 2-100
+		Password    	string  `json:"password" validate:"required,min=6,max=32" label:"密码"` // 密码 6-32
+		GoogleCaptcha	string  `json:"googleCaptcha" validate:"required,min=6,max=2000" label:"谷歌验证Token"` // 谷歌验证Token
+		DeviceId    	string  `json:"deviceId" validate:"required,min=10,max=100" label:"设备UUID"` // 设备UUID
+		AppVersion  	string  `json:"appVersion" validate:"required,min=1,max=15" label:"app版本"` // appVersion
+		SystemVersion	string  `json:"systemVersion" validate:"required,min=1,max=15" label:"system版本"` // systemVersion
+		Platform    	int64   `json:"platform" validate:"required,gte=0,lte=15" label:"登录平台"` // 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac
+	}
+	LoginGoogleReq {
+		AccessToken		string  `json:"accessToken" validate:"required,min=2,max=200" label:"谷歌授权Token"` // 谷歌授权Token
+		IdToken			string  `json:"idToken" validate:"required,min=2,max=200" label:"谷歌授权IdToken"` // 谷歌授权IdToken
+		DeviceId    	string  `json:"deviceId" validate:"required,min=10,max=100" label:"设备UUID"` // 设备UUID
+		AppVersion  	string  `json:"appVersion" validate:"required,min=1,max=15" label:"app版本"` // appVersion
+		SystemVersion	string  `json:"systemVersion" validate:"required,min=1,max=30" label:"system版本"` // systemVersion
+		Platform    	int64   `json:"platform" validate:"required,gte=0,lte=15" label:"登录平台"` // 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac
+	}
+	LoginAppleReq {
+		UserID			string  `json:"userID" validate:"required,min=2,max=100" label:"userID"` // userID
+		IdentityToken	string  `json:"identityToken" validate:"required,min=2,max=100" label:"identityToken"` // identityToken
+		AuthorizationCode	string  `json:"authorizationCode" validate:"required,min=2,max=100" label:"authorizationCode"` // authorizationCode
+		DeviceId    		string  `json:"deviceId" validate:"required,min=10,max=100" label:"设备UUID"` // 设备UUID
+		AppVersion  		string  `json:"appVersion" validate:"required,min=1,max=15" label:"app版本"` // appVersion
+		SystemVersion		string  `json:"systemVersion" validate:"required,min=1,max=15" label:"system版本"` // systemVersion
+		Platform    		int64   `json:"platform" validate:"required,gte=0,lte=15" label:"登录平台"` // 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac
+	}
+	LoginResp {
+        UserId 		string `json:"userId"`	// 用户标识
+        User        User   `json:"userbase"`	// 用户基本信息
+        AccessToken string `json:"accessToken"`		// 用户token
+        AccessExpire int64 `json:"accessExpire"`	// 过期时长
+	}
+)
+
+@server(
+	group : login
+	prefix : /api/login
+	middleware: PermAuth
+)
+
+service core-api {
+	@doc(
+		summary: "app邮箱验证码登录"
+	)
+	@handler EmailCode
+	post /email/code (LoginEmailCodeReq) returns (LoginResp)
+
+    @doc(
+		summary: "app邮箱密码登录"
+	)
+	@handler EmailPassword
+	post /email/password (LoginEmailPasswordReq) returns (LoginResp)
+
+	@doc(
+		summary: "app谷歌授权登录"
+	)
+	@handler Google
+	post /google (LoginGoogleReq) returns (LoginResp)
+
+	@doc(
+		summary: "app苹果授权登录"
+	)
+	@handler Apple
+	post /apple (LoginAppleReq) returns (LoginResp)
+}
+
+@server(
+	jwt: JwtAuth
+	group : login
+	prefix : /api/login
+	middleware: PermAuth
+)
+
+service core-api {
+
+	@doc(
+		summary: "退出登录"
+	)
+	@handler Logout
+	post /logout returns (StatusResp)
+}

@@ -1,0 +1,270 @@
+syntax = "v1"
+
+info(
+	title: "用户"
+	desc: "用户"
+	author: "lab"
+	email: "sharecv@lab.com"
+)
+
+type (
+	UpdateUserBaseReq {
+		FirstName		string  `json:"firstName" validate:"required,min=1,max=200" label:"姓"` // 姓 1-200
+		LastName		string  `json:"lastName" validate:"required,min=1,max=200" label:"名"` // 名 1-200
+		Birthday        string  `json:"birthday" validate:"required,min=1,max=20" label:"生日"` // 生日 1986-01-01
+		CountryId		int64  `json:"countryId" validate:"required,gte=1" label:"国家主键"` // 国家主键 >=1
+		CountryName     string  `json:"countryName" validate:"required,min=1,max=200" label:"国家名称"` // 国家名称 1-200
+		Province        string  `json:"province,optional" validate:"omitempty,min=0,max=200" label:"省份"` // 省份 0-200
+		City	        string  `json:"city" validate:"required,min=1,max=200" label:"城市"` // 城市 1-200
+		Address	        string  `json:"address,optional" validate:"omitempty,min=0,max=500" label:"详细地点"` // 详细地点 0-500
+	}
+	GetOtherUserInfoReq {
+		UUID 			string  `json:"userId" validate:"required,min=10,max=200" label:"主键"` // 主键
+	}
+	UpdateUserAvatarReq {
+		Avatar          string  `json:"avatar" validate:"required,min=1,max=200" label:"头像地址"` // 头像 1-200
+	}
+	UpdateUserPhoneReq {
+		Code        string  `json:"code" validate:"required,min=4,max=6" label:"验证码"` // 验证码 4-6
+		Phone		string  `json:"phone" validate:"required,min=4,max=30" label:"手机号"` // 手机号 4-30
+		PhoneNum	string  `json:"phoneNum" validate:"required,min=1,max=10" label:"手机国家编号"` // 手机国家编号 1-10
+		CountryId	int64  `json:"countryId" validate:"required,gte=1" label:"国家主键"` // 国家主键 >=1
+	}
+	UpdateUserBackgroundReq {
+		BackgroundImg	string  `json:"background" validate:"required,min=1,max=200" label:"头像地址"` // 背景 1-200
+	}
+	UpdateUserNameReq {
+		FirstName		string  `json:"firstName" validate:"required,min=1,max=200" label:"姓"` // 姓 1-200
+		LastName		string  `json:"lastName" validate:"required,min=1,max=200" label:"名"` // 名 1-200
+	}
+	UpdateUserNickNameReq {
+		Nickname        string  `json:"nickName" validate:"required,min=1,max=32" label:"昵称"` // 昵称 1-32
+	}
+	UpdateUserBirthdayReq {
+		Birthday        string  `json:"birthday" validate:"required,min=1,max=20" label:"生日"` // 生日 1986-01-01
+	}
+	UpdateUserWeightReq {
+		Height          int64  `json:"height" validate:"required,gte=1,lte=500" label:"身高"` // 身高 1-500
+		Weight          int64  `json:"weight" validate:"required,gte=1,lte=500" label:"体重"` // 体重 1-500
+	}
+	UpdateUserGenderReq {
+		Gender          int64   `json:"gender" validate:"required,gte=0,lte=5" label:"性别"` // 性别 1=女 2=男 3=保密
+	}
+	UpdateUserModeTypeReq {
+		ModeType        int64   `json:"modeType" validate:"required,gte=1,lte=2" label:"是否公开"` // 是否公开 1=公开 2=隐藏
+	}
+	UpdateUserCountryReq {
+		CountryId		int64  `json:"countryId" validate:"required,gte=1" label:"国家主键"` // 国家主键 >=1
+		CountryName     string  `json:"countryName" validate:"required,min=1,max=200" label:"国家名称"` // 国家名称 1-200
+	}
+	UpdateUserIdentityReq {
+		Identity		int64  `json:"identity" validate:"required,gte=1" label:"用户身份"` // 用户身份 1=求职者 2=学生 3=招聘方
+	}
+	UpdateUserProvinceReq {
+		Province        string  `json:"province" validate:"required,min=1,max=200" label:"省份"` // 省份 1-200
+	}
+	UpdateUserCityReq {
+		City	        string  `json:"city" validate:"required,min=1,max=200" label:"城市"` // 城市 1-200
+	}
+	UpdateUserAddressReq {
+		Address	        string  `json:"address" validate:"required,min=1,max=500" label:"详细地点"` // 详细地点 1-500
+	}
+	UpdateUserPurposeCityReq {
+		PurposeCity		string  `json:"purposeCity" validate:"required,min=1,max=2000" label:"意向城市"` // 意向城市 1-2000 多个用英语逗号分割
+	}
+	UpdateUserInterestsReq {
+		Interests		string  `json:"interests" validate:"required,min=1,max=2000" label:"兴趣爱好"` // 兴趣爱好 1-2000 多个用英语逗号分割
+	}
+	UpdateUserLanguagesReq {
+		Languages		string  `json:"languages" validate:"required,min=1,max=2000" label:"兴趣爱好"` // 会的语言 1-2000 多个用英语逗号分割
+	}
+	UpdateUserDatingTargetsReq {
+		DatingTargets	string  `json:"datingTargets" validate:"required,min=1,max=2000" label:"交友的目"` // 交友的目 1-2000 多个用英语逗号分割
+	}
+	UpdateUserPersonalStrengthReq {
+		PersonalStrength string  `json:"personalStrength" validate:"required,min=1,max=1000" label:"个人实力"` // 个人实力 1-1000
+	}
+	UpdateUserPersonalSkillsReq {
+		PersonalSkills	 string  `json:"personalSkills" validate:"required,min=1,max=2000" label:"个人技能"` // 个人技能 1-2000 多个用英语逗号分割
+	}
+	UpdateUserLocationReq {
+		TimeZone		string  `json:"timeZone" validate:"required,min=0,max=100" label:"时区"` // 时区 0-100
+		Country			string  `json:"country" validate:"required,min=0,max=100" label:"国家"` // 国家 0-200
+		CountryCode		string  `json:"countryCode" validate:"required,min=0,max=50" label:"国家编号"` // 国家编号 0-50
+		Province		string  `json:"province" validate:"required,min=0,max=200" label:"城市"` // 省份 0-200
+		City			string  `json:"city" validate:"required,min=0,max=200" label:"城市"` // 城市 0-200
+		State			string  `json:"state" validate:"required,min=0,max=200" label:"县"` // 县 0-200
+		Area			string  `json:"area" validate:"required,min=0,max=200" label:"区域"` // 区域 0-200
+		Street			string  `json:"street" validate:"required,min=0,max=500" label:"街道"` // 街道 0-500
+		Latitude		float64  `json:"latitude" validate:"required" label:"纬度"` // 纬度
+		Longitude		float64  `json:"longitude" validate:"required" label:"经度"` // 经度
+		PostalCode		string  `json:"postalCode" validate:"required,min=0,max=50" label:"邮政编码"` // 邮政编码 0-50
+		Address			string  `json:"address" validate:"required,min=0,max=1000" label:"详细地点"` // 详细地点 0-1000
+	}
+)
+
+type (
+    UserFeedbackReq {
+        Content		string  `json:"content" validate:"required,min=10,max=1000" label:"反馈内容"` // 反馈内容 10-1000字符
+        FileUrls    string  `json:"fileUrls,optional" validate:"omitempty,min=0,max=2000" label:"图片地址"` // 图片地址 多个用逗号分割 0-2000
+    }
+)
+
+@server(
+	jwt: JwtAuth
+	group : userbase
+	prefix : /api/userbase
+	middleware: PermAuth
+)
+service core-api {
+
+	@doc(
+		summary: "获取用户详情"
+	)
+	@handler GetUserInfo
+	post /info returns (UserInfo)
+
+	@doc(
+		summary: "获取他人用户详情"
+	)
+	@handler GetOtherUserInfo
+	post /info/other (GetOtherUserInfoReq) returns (OtherUserInfo)
+
+	@doc(
+		summary: "更新手机号信息"
+	)
+	@handler UpdateUserPhone
+	post /update/phone (UpdateUserPhoneReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新基本信息"
+	)
+	@handler UpdateUserBase
+	post /update/base (UpdateUserBaseReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新头像"
+	)
+	@handler UpdateUserAvatar
+	post /update/avatar (UpdateUserAvatarReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新背景"
+	)
+	@handler UpdateUserBackgroundImg
+	post /update/background (UpdateUserBackgroundReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新姓名"
+	)
+	@handler UpdateUserName
+	post /update/name (UpdateUserNameReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新昵称"
+	)
+	@handler UpdateUserNickName
+	post /update/nickname (UpdateUserNickNameReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新生日"
+	)
+	@handler UpdateUserBirthday
+	post /update/birthday (UpdateUserBirthdayReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新身高和体重"
+	)
+	@handler UpdateUserWeight
+	post /update/weight (UpdateUserWeightReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新性别"
+	)
+	@handler UpdateUserGender
+	post /update/gender (UpdateUserGenderReq) returns (StatusResp)
+
+	@doc(
+		summary: "设置是否公开"
+	)
+	@handler UpdateUserModeType
+	post /update/mode (UpdateUserModeTypeReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新国家"
+	)
+	@handler UpdateUserCountry
+	post /update/country (UpdateUserCountryReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新身份"
+	)
+	@handler UpdateUserIdentity
+	post /update/identity (UpdateUserIdentityReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新省份"
+	)
+	@handler UpdateUserProvince
+	post /update/province (UpdateUserProvinceReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新城市"
+	)
+	@handler UpdateUserCity
+	post /update/city (UpdateUserCityReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新详细地点"
+	)
+	@handler UpdateUserAddress
+	post /update/address (UpdateUserAddressReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新意向城市"
+	)
+	@handler UpdateUserPurposeCity
+	post /update/purpose/city (UpdateUserPurposeCityReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新兴趣爱好"
+	)
+	@handler UpdateUserInterests
+	post /update/interests (UpdateUserInterestsReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新会的语言"
+	)
+	@handler UpdateUserLanguages
+	post /update/languages (UpdateUserLanguagesReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新交友的目"
+	)
+	@handler UpdateUserDatingTargets
+	post /update/dating/targets (UpdateUserDatingTargetsReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新个人魅力"
+	)
+	@handler UpdateUserPersonalStrength
+	post /update/personal/strength (UpdateUserPersonalStrengthReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新职业技能"
+	)
+	@handler UpdateUserPersonalSkills
+	post /update/personal/skills (UpdateUserPersonalSkillsReq) returns (StatusResp)
+
+	@doc(
+		summary: "更新用户定位"
+	)
+	@handler UpdateUserLocation
+	post /update/location (UpdateUserLocationReq) returns (StatusResp)
+
+	@doc(
+		summary: "用户意见反馈"
+	)
+	@handler UserFeedBack
+	post /feedback (UserFeedbackReq) returns (StatusResp)
+}

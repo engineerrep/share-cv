@@ -1,0 +1,65 @@
+syntax = "v1"
+
+info(
+    title: "用户视频"
+    desc: "用户视频"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserVideo {
+        Id 			int64 `json:"id"` // 主键
+        Title		string `json:"title"` // 标题
+        CoverUrl	string `json:"coverUrl"` // 封面完整地址
+        FileUrl 	string `json:"fileUrl"` // 视频完整地址
+        PlayTime 	float64 `json:"playTime"` // 播放时长
+        VideoSize 	float64 `json:"videoSize"` // 视频大小kb
+        OrderBy		int64 `json:"orderBy"` // 排序 从小到大的顺序
+    }
+    AddUserVideo {
+        Id 	        int64	`json:"id,optional" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        Title		string	`json:"title,optional" validate:"omitempty,min=0,max=50" label:"视频标题"` // 视频标题 0-50
+        CoverUrl	string  `json:"coverUrl" validate:"required,min=2,max=200" label:"视频封面"` // 视频封面 2-200
+        FileUrl		string  `json:"fileUrl" validate:"required,min=2,max=200" label:"视频URL"` // 视频URL 2-200
+        PlayTime 	float64	`json:"playTime" validate:"required,gte=0" label:"播放时长"` // 播放时长 单位 秒
+        VideoSize 	float64	`json:"videoSize" validate:"required,gte=0" label:"视频大小"` // 视频大小 单位 kb
+        OrderBy 	int64	`json:"orderBy,optional" validate:"omitempty,gte=0" label:"视频排序"` // 视频排序 从小到大的顺序
+    }
+    AddUserVideoReq {
+        List []AddUserVideo `json:"list" validate:"required" label:"视频集合"` // 视频集合
+    }
+    DeleteUserVideoReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"视频id"` // 视频id
+    }
+    UserVideoResp {
+        List []UserVideo `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : uservideo
+    prefix : /api/user/video
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取视频"
+    )
+    @handler List
+    post /list returns (UserVideoResp)
+
+    @doc(
+        summary: "新增视频"
+    )
+    @handler Add
+    post /add (AddUserVideoReq) returns (StatusResp)
+
+    @doc(
+        summary: "删除视频"
+    )
+    @handler Delete
+    post /delete (DeleteUserVideoReq) returns (StatusResp)
+}

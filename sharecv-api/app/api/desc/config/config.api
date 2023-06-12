@@ -1,0 +1,34 @@
+syntax = "v1"
+
+info(
+    title: "配置"
+    desc: "配置"
+    author: "lab"
+    email: "sharecv@xxxxxx.com"
+)
+
+type (
+    ConfigResp {
+        ApiUrls             []string `json:"apiUrls"`          // 接口跟地址
+        WebUrls             []string `json:"webUrls"`          // web跟地址
+        OssAuthUrl          string `json:"ossAuthUrl"`         // oss授权地址
+        OssBucketName       string `json:"ossBucketName"`      // oss储存桶名称
+        OssBucketUrl        string `json:"ossBucketUrl"`       // oss储存桶域名
+        OssBucketEndpoint   string `json:"ossBucketEndpoint"`  // oss储存桶地域节点
+    }
+)
+
+@server(
+    group : config
+    prefix : /api/config
+    middleware: PermAuth
+)
+
+service core-api {
+
+    @doc(
+        summary: "获取配置信息"
+    )
+    @handler GetConfig
+    post /info returns (ConfigResp)
+}

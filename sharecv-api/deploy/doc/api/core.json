@@ -1,0 +1,4543 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "sharecvapi",
+    "description": "sharecvapi",
+    "version": "v1.0.0"
+  },
+  "host": "http://sharecvapi.xxxxxx.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/account/change/email/with/code": {
+      "post": {
+        "summary": "邮箱验证码更改新邮箱",
+        "operationId": "ChangeEmailWithCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangeEmailWithCodeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "account"
+        ]
+      }
+    },
+    "/api/account/change/email/with/password": {
+      "post": {
+        "summary": "登录密码更改邮箱",
+        "operationId": "ChangeEmailWithPassword",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangeEmailWithPasswordReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "account"
+        ]
+      }
+    },
+    "/api/account/change/password": {
+      "post": {
+        "summary": "旧密码修改新密码",
+        "operationId": "ChangePassword",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangePasswordReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "account"
+        ]
+      }
+    },
+    "/api/account/check/email/code": {
+      "post": {
+        "summary": "邮箱验证码校验",
+        "operationId": "CheckEmailCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CheckCodeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "account"
+        ]
+      }
+    },
+    "/api/account/forget/password": {
+      "post": {
+        "summary": "邮箱验证码找回密码",
+        "operationId": "ForgetPassword",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ForgetPasswordReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "account"
+        ]
+      }
+    },
+    "/api/account/send/email/code": {
+      "post": {
+        "summary": "发送邮箱验证码",
+        "operationId": "SendEmailCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CodeResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendEmailReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "account"
+        ]
+      }
+    },
+    "/api/common/country": {
+      "post": {
+        "summary": "获取国家列表",
+        "operationId": "GetCountryList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CountryListResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "common"
+        ]
+      }
+    },
+    "/api/common/language": {
+      "post": {
+        "summary": "获取语言列表",
+        "operationId": "GetLanguageList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LanguageListResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "common"
+        ]
+      }
+    },
+    "/api/config/info": {
+      "post": {
+        "summary": "获取配置信息",
+        "operationId": "GetConfig",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ConfigResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "config"
+        ]
+      }
+    },
+    "/api/login/apple": {
+      "post": {
+        "summary": "app苹果授权登录",
+        "operationId": "Apple",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginAppleReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "login"
+        ]
+      }
+    },
+    "/api/login/email/code": {
+      "post": {
+        "summary": "app邮箱验证码登录",
+        "operationId": "EmailCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginEmailCodeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "login"
+        ]
+      }
+    },
+    "/api/login/email/password": {
+      "post": {
+        "summary": "app邮箱密码登录",
+        "operationId": "EmailPassword",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginEmailPasswordReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "login"
+        ]
+      }
+    },
+    "/api/login/google": {
+      "post": {
+        "summary": "app谷歌授权登录",
+        "operationId": "Google",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginGoogleReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "login"
+        ]
+      }
+    },
+    "/api/login/logout": {
+      "post": {
+        "summary": "退出登录",
+        "operationId": "Logout",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "login"
+        ]
+      }
+    },
+    "/api/oss/auth/server": {
+      "get": {
+        "summary": "获取oss授权信息",
+        "operationId": "OssAuthServer",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/OssResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "oss"
+        ]
+      }
+    },
+    "/api/oss/upload": {
+      "post": {
+        "summary": "oss文件上传",
+        "operationId": "OssUpload",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/OssUploadResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "oss"
+        ]
+      }
+    },
+    "/api/register/check/email": {
+      "post": {
+        "summary": "检测邮箱是否注册",
+        "operationId": "CheckEmail",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CheckEmailReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "register"
+        ]
+      }
+    },
+    "/api/register/email": {
+      "post": {
+        "summary": "邮箱验证码+密码注册",
+        "operationId": "RegisterEmail",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RegisterEmailReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "register"
+        ]
+      }
+    },
+    "/api/user/company/add": {
+      "post": {
+        "summary": "新增公司",
+        "operationId": "Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IdResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddUserCompanyReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercompany"
+        ]
+      }
+    },
+    "/api/user/company/delete": {
+      "post": {
+        "summary": "删除公司",
+        "operationId": "Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteUserCompanyReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercompany"
+        ]
+      }
+    },
+    "/api/user/company/get": {
+      "post": {
+        "summary": "根据ID获取公司",
+        "operationId": "Get",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserCompany"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetUserCompanyReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercompany"
+        ]
+      }
+    },
+    "/api/user/company/list": {
+      "post": {
+        "summary": "获取公司",
+        "operationId": "List",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserCompanyResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "usercompany"
+        ]
+      }
+    },
+    "/api/user/company/upd/skills": {
+      "post": {
+        "summary": "修改公司技能",
+        "operationId": "UpdJobSkills",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdUserCompanySkillsReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercompany"
+        ]
+      }
+    },
+    "/api/user/custom/attribute/add": {
+      "post": {
+        "summary": "新增自定义属性",
+        "operationId": "Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IdResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangeUserCustomAttributeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercustomattribute"
+        ]
+      }
+    },
+    "/api/user/custom/attribute/delete": {
+      "post": {
+        "summary": "删除自定义属性",
+        "operationId": "Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteUserCustomAttributeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercustomattribute"
+        ]
+      }
+    },
+    "/api/user/custom/attribute/get": {
+      "post": {
+        "summary": "根据ID获取自定义属性",
+        "operationId": "Get",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserCustomAttribute"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetUserCustomAttributeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usercustomattribute"
+        ]
+      }
+    },
+    "/api/user/custom/attribute/list": {
+      "post": {
+        "summary": "获取自定义属性列表",
+        "operationId": "List",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserCustomAttributeResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "usercustomattribute"
+        ]
+      }
+    },
+    "/api/user/education/add": {
+      "post": {
+        "summary": "新增教育",
+        "operationId": "Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IdResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddUserEducationReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usereducation"
+        ]
+      }
+    },
+    "/api/user/education/delete": {
+      "post": {
+        "summary": "删除教育",
+        "operationId": "Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteUserEducationReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usereducation"
+        ]
+      }
+    },
+    "/api/user/education/get": {
+      "post": {
+        "summary": "根据ID获取教育",
+        "operationId": "Get",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEducation"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetUserEducationReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "usereducation"
+        ]
+      }
+    },
+    "/api/user/education/list": {
+      "post": {
+        "summary": "获取教育",
+        "operationId": "List",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEducationResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "usereducation"
+        ]
+      }
+    },
+    "/api/user/photo/add": {
+      "post": {
+        "summary": "新增相册",
+        "operationId": "Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddUserPhotoReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userphoto"
+        ]
+      }
+    },
+    "/api/user/photo/delete": {
+      "post": {
+        "summary": "删除相册",
+        "operationId": "Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteUserPhotoReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userphoto"
+        ]
+      }
+    },
+    "/api/user/photo/list": {
+      "post": {
+        "summary": "获取相册",
+        "operationId": "List",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserPhotoResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "userphoto"
+        ]
+      }
+    },
+    "/api/user/project/add": {
+      "post": {
+        "summary": "新增项目",
+        "operationId": "Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IdResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddUserProjectReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userproject"
+        ]
+      }
+    },
+    "/api/user/project/delete": {
+      "post": {
+        "summary": "删除项目",
+        "operationId": "Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteUserProjectReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userproject"
+        ]
+      }
+    },
+    "/api/user/project/get": {
+      "post": {
+        "summary": "根据ID获取项目",
+        "operationId": "Get",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserProject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetUserProjectReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userproject"
+        ]
+      }
+    },
+    "/api/user/project/list": {
+      "post": {
+        "summary": "获取项目",
+        "operationId": "List",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserProjectResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "userproject"
+        ]
+      }
+    },
+    "/api/user/project/upd/skills": {
+      "post": {
+        "summary": "修改项目技能",
+        "operationId": "UpdProjectSkills",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdUserProjectSkillsReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userproject"
+        ]
+      }
+    },
+    "/api/user/video/add": {
+      "post": {
+        "summary": "新增视频",
+        "operationId": "Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddUserVideoReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "uservideo"
+        ]
+      }
+    },
+    "/api/user/video/delete": {
+      "post": {
+        "summary": "删除视频",
+        "operationId": "Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteUserVideoReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "uservideo"
+        ]
+      }
+    },
+    "/api/user/video/list": {
+      "post": {
+        "summary": "获取视频",
+        "operationId": "List",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserVideoResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "uservideo"
+        ]
+      }
+    },
+    "/api/userbase/feedback": {
+      "post": {
+        "summary": "用户意见反馈",
+        "operationId": "UserFeedBack",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserFeedbackReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/info": {
+      "post": {
+        "summary": "获取用户详情",
+        "operationId": "GetUserInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserInfo"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/info/other": {
+      "post": {
+        "summary": "获取他人用户详情",
+        "operationId": "GetOtherUserInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/OtherUserInfo"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetOtherUserInfoReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/address": {
+      "post": {
+        "summary": "更新详细地点",
+        "operationId": "UpdateUserAddress",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserAddressReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/avatar": {
+      "post": {
+        "summary": "更新头像",
+        "operationId": "UpdateUserAvatar",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserAvatarReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/background": {
+      "post": {
+        "summary": "更新背景",
+        "operationId": "UpdateUserBackgroundImg",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserBackgroundReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/base": {
+      "post": {
+        "summary": "更新基本信息",
+        "operationId": "UpdateUserBase",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserBaseReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/birthday": {
+      "post": {
+        "summary": "更新生日",
+        "operationId": "UpdateUserBirthday",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserBirthdayReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/city": {
+      "post": {
+        "summary": "更新城市",
+        "operationId": "UpdateUserCity",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserCityReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/country": {
+      "post": {
+        "summary": "更新国家",
+        "operationId": "UpdateUserCountry",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserCountryReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/dating/targets": {
+      "post": {
+        "summary": "更新交友的目",
+        "operationId": "UpdateUserDatingTargets",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserDatingTargetsReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/gender": {
+      "post": {
+        "summary": "更新性别",
+        "operationId": "UpdateUserGender",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserGenderReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/identity": {
+      "post": {
+        "summary": "更新身份",
+        "operationId": "UpdateUserIdentity",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserIdentityReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/interests": {
+      "post": {
+        "summary": "更新兴趣爱好",
+        "operationId": "UpdateUserInterests",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserInterestsReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/location": {
+      "post": {
+        "summary": "更新用户定位",
+        "operationId": "UpdateUserLocation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserLocationReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/mode": {
+      "post": {
+        "summary": "设置是否公开",
+        "operationId": "UpdateUserModeType",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserModeTypeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/name": {
+      "post": {
+        "summary": "更新姓名",
+        "operationId": "UpdateUserName",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserNameReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/nickname": {
+      "post": {
+        "summary": "更新昵称",
+        "operationId": "UpdateUserNickName",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserNickNameReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/personal/skills": {
+      "post": {
+        "summary": "更新职业技能",
+        "operationId": "UpdateUserPersonalSkills",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserPersonalSkillsReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/personal/strength": {
+      "post": {
+        "summary": "更新个人魅力",
+        "operationId": "UpdateUserPersonalStrength",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserPersonalStrengthReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/province": {
+      "post": {
+        "summary": "更新省份",
+        "operationId": "UpdateUserProvince",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserProvinceReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/purpose/city": {
+      "post": {
+        "summary": "更新意向城市",
+        "operationId": "UpdateUserPurposeCity",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserPurposeCityReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/userbase/update/weight": {
+      "post": {
+        "summary": "更新身高和体重",
+        "operationId": "UpdateUserWeight",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserWeightReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "userbase"
+        ]
+      }
+    },
+    "/api/web/email/code": {
+      "post": {
+        "summary": "web邮箱验证码登录",
+        "operationId": "EmailCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WebLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebLoginEmailCodeReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/api/web/email/password": {
+      "post": {
+        "summary": "web邮箱密码登录",
+        "operationId": "EmailPassword",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WebLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebLoginEmailPasswordReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/api/web/email/register": {
+      "post": {
+        "summary": "web邮箱验证码+密码注册",
+        "operationId": "EmailRegister",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WebLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebRegisterEmailReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/api/web/google/auth/url": {
+      "post": {
+        "summary": "web获取谷歌授权URL",
+        "operationId": "GoogleAuthUrl",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WebGoogleAuthResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebGoogleAuthReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/api/web/google/login": {
+      "post": {
+        "summary": "web谷歌授权登录",
+        "operationId": "Google",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WebLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebLoginGoogleReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "web"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AddUserCompanyReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键 0 新增 \u003e0 更新"
+        },
+        "companyName": {
+          "type": "string",
+          "description": " 公司名称 2-200"
+        },
+        "companyCountry": {
+          "type": "string",
+          "description": " 公司国家 0-100"
+        },
+        "companyCity": {
+          "type": "string",
+          "description": " 公司城市 0-100"
+        },
+        "companyIndustry": {
+          "type": "string",
+          "description": " 公司行业 0-100"
+        },
+        "startTime": {
+          "type": "string",
+          "description": " 入学时间 1-20"
+        },
+        "endTime": {
+          "type": "string",
+          "description": " 毕业时间 1-20"
+        },
+        "jobPosition": {
+          "type": "string",
+          "description": " 工作职位 1-100"
+        },
+        "jobContent": {
+          "type": "string",
+          "description": " 工作内容 10-1000"
+        },
+        "jobSummary": {
+          "type": "string",
+          "description": " 工作总结 0-1000"
+        },
+        "jobSkills": {
+          "type": "string",
+          "description": " 使用技能 0-1000 多个用英文逗号分隔开"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "AddUserCompanyReq",
+      "required": [
+        "id",
+        "omitempty",
+        "主键",
+        "companyName",
+        "required",
+        "组织名称",
+        "公司国家",
+        "公司城市",
+        "公司行业",
+        "startTime",
+        "入职时间",
+        "endTime",
+        "离职时间",
+        "jobPosition",
+        "工作职位",
+        "jobContent",
+        "工作内容",
+        "工作总结",
+        "使用技能",
+        "orderBy",
+        "排序"
+      ]
+    },
+    "AddUserEducationReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键 0 新增 \u003e0 更新"
+        },
+        "organizationName": {
+          "type": "string",
+          "description": " 组织名称 2-200"
+        },
+        "organizationCountry": {
+          "type": "string",
+          "description": " 组织国家 0-200"
+        },
+        "organizationCity": {
+          "type": "string",
+          "description": " 组织城市 0-200"
+        },
+        "organizationLevel": {
+          "type": "string",
+          "description": " 组织级别 0-100"
+        },
+        "startTime": {
+          "type": "string",
+          "description": " 入学时间 1-20"
+        },
+        "endTime": {
+          "type": "string",
+          "description": " 毕业时间 1-20"
+        },
+        "studySpecialty": {
+          "type": "string",
+          "description": " 学习专业 1-100"
+        },
+        "studyAchievement": {
+          "type": "string",
+          "description": " 学习成就 0-2000"
+        },
+        "degreeEducation": {
+          "type": "string",
+          "description": " 教育学位 1-100"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "AddUserEducationReq",
+      "required": [
+        "id",
+        "omitempty",
+        "主键",
+        "organizationName",
+        "required",
+        "组织名称",
+        "组织国家",
+        "组织城市",
+        "组织级别",
+        "startTime",
+        "入学时间",
+        "endTime",
+        "毕业时间",
+        "studySpecialty",
+        "学习专业",
+        "学习成就",
+        "degreeEducation",
+        "教育学位",
+        "orderBy",
+        "排序"
+      ]
+    },
+    "AddUserPhoto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键 0 新增 \u003e0 更新"
+        },
+        "title": {
+          "type": "string",
+          "description": " 相册标题 3-50"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": " 相册URL"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 视频排序 从小到大的顺序"
+        }
+      },
+      "title": "AddUserPhoto",
+      "required": [
+        "id",
+        "omitempty",
+        "主键",
+        "相册标题",
+        "fileUrl",
+        "required",
+        "相册URL",
+        "orderBy",
+        "视频排序"
+      ]
+    },
+    "AddUserPhotoReq": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddUserPhoto"
+          },
+          "description": " 相册集合"
+        }
+      },
+      "title": "AddUserPhotoReq",
+      "required": [
+        "list",
+        "相册集合"
+      ]
+    },
+    "AddUserProjectReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键 0 新增 \u003e0 更新"
+        },
+        "projectName": {
+          "type": "string",
+          "description": " 项目名称 2-100"
+        },
+        "projectContent": {
+          "type": "string",
+          "description": " 项目内容 10-1000"
+        },
+        "jobContent": {
+          "type": "string",
+          "description": " 工作内容 10-1000"
+        },
+        "startTime": {
+          "type": "string",
+          "description": " 入学时间 1-20"
+        },
+        "endTime": {
+          "type": "string",
+          "description": " 毕业时间 1-20"
+        },
+        "projectLink": {
+          "type": "string",
+          "description": " 项目链接 0-500"
+        },
+        "projectSkills": {
+          "type": "string",
+          "description": " 使用技能 0-1000 多个用英文逗号分隔开"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "AddUserProjectReq",
+      "required": [
+        "id",
+        "omitempty",
+        "主键",
+        "projectName",
+        "required",
+        "项目名称",
+        "projectContent",
+        "项目内容",
+        "jobContent",
+        "工作内容",
+        "startTime",
+        "入职时间",
+        "endTime",
+        "离职时间",
+        "项目链接",
+        "使用技能",
+        "orderBy",
+        "排序"
+      ]
+    },
+    "AddUserVideo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键 0 新增 \u003e0 更新"
+        },
+        "title": {
+          "type": "string",
+          "description": " 视频标题 3-50"
+        },
+        "coverUrl": {
+          "type": "string",
+          "description": " 视频封面"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": " 视频URL"
+        },
+        "playTime": {
+          "type": "number",
+          "format": "double",
+          "description": " 播放时长 单位 秒"
+        },
+        "videoSize": {
+          "type": "number",
+          "format": "double",
+          "description": " 视频大小 单位 kb"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 视频排序 从小到大的顺序"
+        }
+      },
+      "title": "AddUserVideo",
+      "required": [
+        "id",
+        "omitempty",
+        "主键",
+        "视频标题",
+        "coverUrl",
+        "required",
+        "视频封面",
+        "fileUrl",
+        "视频URL",
+        "playTime",
+        "播放时长",
+        "videoSize",
+        "视频大小",
+        "orderBy",
+        "视频排序"
+      ]
+    },
+    "AddUserVideoReq": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddUserVideo"
+          },
+          "description": " 视频集合"
+        }
+      },
+      "title": "AddUserVideoReq",
+      "required": [
+        "list",
+        "视频集合"
+      ]
+    },
+    "ChangeEmailWithCodeReq": {
+      "type": "object",
+      "properties": {
+        "newEmail": {
+          "type": "string",
+          "description": " 新邮箱 2-100"
+        },
+        "code": {
+          "type": "string",
+          "description": " 新邮箱验证码"
+        }
+      },
+      "title": "ChangeEmailWithCodeReq",
+      "required": [
+        "newEmail",
+        "required",
+        "新邮箱",
+        "code",
+        "验证码"
+      ]
+    },
+    "ChangeEmailWithPasswordReq": {
+      "type": "object",
+      "properties": {
+        "newEmail": {
+          "type": "string",
+          "description": " 新邮箱 2-100"
+        },
+        "oldPassword": {
+          "type": "string",
+          "description": " 旧密码"
+        },
+        "newPassword": {
+          "type": "string",
+          "description": " 新密码"
+        }
+      },
+      "title": "ChangeEmailWithPasswordReq",
+      "required": [
+        "newEmail",
+        "required",
+        "新邮箱",
+        "oldPassword",
+        "旧密码",
+        "newPassword",
+        "新密码"
+      ]
+    },
+    "ChangePasswordReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        },
+        "oldPassword": {
+          "type": "string",
+          "description": " 旧密码 6-32"
+        },
+        "newPassword": {
+          "type": "string",
+          "description": " 新密码 6-32"
+        }
+      },
+      "title": "ChangePasswordReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "googleCaptcha",
+        "谷歌验证Token",
+        "oldPassword",
+        "旧密码",
+        "newPassword",
+        "新密码"
+      ]
+    },
+    "ChangeUserCustomAttributeReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键 0 新增 \u003e0 更新"
+        },
+        "title": {
+          "type": "string",
+          "description": " 标题 3-30"
+        },
+        "value": {
+          "type": "string",
+          "description": " 值 5-1000"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 视频排序 从小到大的顺序"
+        }
+      },
+      "title": "ChangeUserCustomAttributeReq",
+      "required": [
+        "id",
+        "omitempty",
+        "主键",
+        "title",
+        "required",
+        "标题",
+        "value",
+        "值",
+        "orderBy",
+        "视频排序"
+      ]
+    },
+    "CheckCodeReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码"
+        }
+      },
+      "title": "CheckCodeReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "code",
+        "验证码"
+      ]
+    },
+    "CheckEmailReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        }
+      },
+      "title": "CheckEmailReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "googleCaptcha",
+        "谷歌验证Token"
+      ]
+    },
+    "CodeResp": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 状态 0 失败"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码"
+        }
+      },
+      "title": "CodeResp",
+      "required": [
+        "status",
+        "code"
+      ]
+    },
+    "ConfigResp": {
+      "type": "object",
+      "properties": {
+        "apiUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": " 接口跟地址"
+        },
+        "webUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": " web跟地址"
+        },
+        "ossAuthUrl": {
+          "type": "string",
+          "description": " oss授权地址"
+        },
+        "ossBucketName": {
+          "type": "string",
+          "description": " oss储存桶名称"
+        },
+        "ossBucketUrl": {
+          "type": "string",
+          "description": " oss储存桶域名"
+        },
+        "ossBucketEndpoint": {
+          "type": "string",
+          "description": " oss储存桶地域节点"
+        }
+      },
+      "title": "ConfigResp",
+      "required": [
+        "apiUrls",
+        "webUrls",
+        "ossAuthUrl",
+        "ossBucketName",
+        "ossBucketUrl",
+        "ossBucketEndpoint"
+      ]
+    },
+    "Country": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 国家ID"
+        },
+        "code": {
+          "type": "string",
+          "description": " 国家代码"
+        },
+        "num": {
+          "type": "string",
+          "description": " 国家区号"
+        },
+        "name": {
+          "type": "string",
+          "description": " 国家"
+        }
+      },
+      "title": "Country",
+      "required": [
+        "id",
+        "code",
+        "num",
+        "name"
+      ]
+    },
+    "CountryListResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Country"
+          },
+          "description": " 国家集合"
+        }
+      },
+      "title": "CountryListResp",
+      "required": [
+        "list"
+      ]
+    },
+    "DeleteUserCompanyReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        }
+      },
+      "title": "DeleteUserCompanyReq",
+      "required": [
+        "id",
+        "required",
+        "主键"
+      ]
+    },
+    "DeleteUserCustomAttributeReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 自定义属性id"
+        }
+      },
+      "title": "DeleteUserCustomAttributeReq",
+      "required": [
+        "id",
+        "required",
+        "自定义属性id"
+      ]
+    },
+    "DeleteUserEducationReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        }
+      },
+      "title": "DeleteUserEducationReq",
+      "required": [
+        "id",
+        "required",
+        "主键"
+      ]
+    },
+    "DeleteUserPhotoReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 相册id"
+        }
+      },
+      "title": "DeleteUserPhotoReq",
+      "required": [
+        "id",
+        "required",
+        "相册id"
+      ]
+    },
+    "DeleteUserProjectReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        }
+      },
+      "title": "DeleteUserProjectReq",
+      "required": [
+        "id",
+        "required",
+        "主键"
+      ]
+    },
+    "DeleteUserVideoReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 视频id"
+        }
+      },
+      "title": "DeleteUserVideoReq",
+      "required": [
+        "id",
+        "required",
+        "视频id"
+      ]
+    },
+    "ForgetPasswordReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "password": {
+          "type": "string",
+          "description": " 密码 6-32"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码"
+        }
+      },
+      "title": "ForgetPasswordReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "password",
+        "密码",
+        "code",
+        "验证码"
+      ]
+    },
+    "GetOtherUserInfoReq": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 主键"
+        }
+      },
+      "title": "GetOtherUserInfoReq",
+      "required": [
+        "userId",
+        "required",
+        "主键"
+      ]
+    },
+    "GetUserCompanyReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        }
+      },
+      "title": "GetUserCompanyReq",
+      "required": [
+        "id",
+        "required",
+        "主键"
+      ]
+    },
+    "GetUserCustomAttributeReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 自定义属性id"
+        }
+      },
+      "title": "GetUserCustomAttributeReq",
+      "required": [
+        "id",
+        "required",
+        "自定义属性id"
+      ]
+    },
+    "GetUserEducationReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        }
+      },
+      "title": "GetUserEducationReq",
+      "required": [
+        "id",
+        "required",
+        "主键"
+      ]
+    },
+    "GetUserProjectReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        }
+      },
+      "title": "GetUserProjectReq",
+      "required": [
+        "id",
+        "required",
+        "主键"
+      ]
+    },
+    "IdResp": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 新增主键 0 失败 \u003e0 成功"
+        }
+      },
+      "title": "IdResp",
+      "required": [
+        "id"
+      ]
+    },
+    "Language": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 语言ID"
+        },
+        "code": {
+          "type": "string",
+          "description": " 语言简称"
+        },
+        "fullCode": {
+          "type": "string",
+          "description": " 语言全称"
+        },
+        "countryCode": {
+          "type": "string",
+          "description": " 国家代码"
+        },
+        "name": {
+          "type": "string",
+          "description": " 语言"
+        }
+      },
+      "title": "Language",
+      "required": [
+        "id",
+        "code",
+        "fullCode",
+        "countryCode",
+        "name"
+      ]
+    },
+    "LanguageListResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Language"
+          },
+          "description": " 语言集合"
+        }
+      },
+      "title": "LanguageListResp",
+      "required": [
+        "list"
+      ]
+    },
+    "LoginAppleReq": {
+      "type": "object",
+      "properties": {
+        "userID": {
+          "type": "string",
+          "description": " userID"
+        },
+        "identityToken": {
+          "type": "string",
+          "description": " identityToken"
+        },
+        "authorizationCode": {
+          "type": "string",
+          "description": " authorizationCode"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID"
+        },
+        "appVersion": {
+          "type": "string",
+          "description": " appVersion"
+        },
+        "systemVersion": {
+          "type": "string",
+          "description": " systemVersion"
+        },
+        "platform": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac"
+        }
+      },
+      "title": "LoginAppleReq",
+      "required": [
+        "userID",
+        "required",
+        "identityToken",
+        "authorizationCode",
+        "deviceId",
+        "设备UUID",
+        "appVersion",
+        "app版本",
+        "systemVersion",
+        "system版本",
+        "platform",
+        "登录平台"
+      ]
+    },
+    "LoginEmailCodeReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码 4-6"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID"
+        },
+        "appVersion": {
+          "type": "string",
+          "description": " appVersion"
+        },
+        "systemVersion": {
+          "type": "string",
+          "description": " systemVersion"
+        },
+        "platform": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac"
+        }
+      },
+      "title": "LoginEmailCodeReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "code",
+        "验证码",
+        "googleCaptcha",
+        "谷歌验证Token",
+        "deviceId",
+        "设备UUID",
+        "appVersion",
+        "app版本",
+        "systemVersion",
+        "system版本",
+        "platform",
+        "登录平台"
+      ]
+    },
+    "LoginEmailPasswordReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "password": {
+          "type": "string",
+          "description": " 密码 6-32"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID"
+        },
+        "appVersion": {
+          "type": "string",
+          "description": " appVersion"
+        },
+        "systemVersion": {
+          "type": "string",
+          "description": " systemVersion"
+        },
+        "platform": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac"
+        }
+      },
+      "title": "LoginEmailPasswordReq",
+      "required": [
+        "email",
+        "required",
+        "账号",
+        "password",
+        "密码",
+        "googleCaptcha",
+        "谷歌验证Token",
+        "deviceId",
+        "设备UUID",
+        "appVersion",
+        "app版本",
+        "systemVersion",
+        "system版本",
+        "platform",
+        "登录平台"
+      ]
+    },
+    "LoginGoogleReq": {
+      "type": "object",
+      "properties": {
+        "accessToken": {
+          "type": "string",
+          "description": " 谷歌授权Token"
+        },
+        "idToken": {
+          "type": "string",
+          "description": " 谷歌授权IdToken"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID"
+        },
+        "appVersion": {
+          "type": "string",
+          "description": " appVersion"
+        },
+        "systemVersion": {
+          "type": "string",
+          "description": " systemVersion"
+        },
+        "platform": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 登录平台 1 pc 2 win 3 iOS 4 android 5 iPad 6 mac"
+        }
+      },
+      "title": "LoginGoogleReq",
+      "required": [
+        "accessToken",
+        "required",
+        "谷歌授权Token",
+        "idToken",
+        "谷歌授权IdToken",
+        "deviceId",
+        "设备UUID",
+        "appVersion",
+        "app版本",
+        "systemVersion",
+        "system版本",
+        "platform",
+        "登录平台"
+      ]
+    },
+    "LoginResp": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 用户标识"
+        },
+        "userbase": {
+          "$ref": "#/definitions/User",
+          "description": " 用户基本信息"
+        },
+        "accessToken": {
+          "type": "string",
+          "description": " 用户token"
+        },
+        "accessExpire": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 过期时长"
+        }
+      },
+      "title": "LoginResp",
+      "required": [
+        "userId",
+        "userbase",
+        "accessToken",
+        "accessExpire"
+      ]
+    },
+    "OssResp": {
+      "type": "object",
+      "properties": {
+        "StatusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ErrorCode": {
+          "type": "string"
+        },
+        "ErrorMessage": {
+          "type": "string"
+        },
+        "AccessKeyId": {
+          "type": "string"
+        },
+        "AccessKeySecret": {
+          "type": "string"
+        },
+        "SecurityToken": {
+          "type": "string"
+        },
+        "Expiration": {
+          "type": "string"
+        }
+      },
+      "title": "OssResp",
+      "required": [
+        "StatusCode",
+        "ErrorCode",
+        "ErrorMessage",
+        "AccessKeyId",
+        "AccessKeySecret",
+        "SecurityToken",
+        "Expiration"
+      ]
+    },
+    "OssUploadResp": {
+      "type": "object",
+      "properties": {
+        "filePath": {
+          "type": "string",
+          "description": " 文件路径"
+        }
+      },
+      "title": "OssUploadResp",
+      "required": [
+        "filePath"
+      ]
+    },
+    "OtherUserInfo": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": " 姓"
+        },
+        "lastName": {
+          "type": "string",
+          "description": " 名"
+        },
+        "nickname": {
+          "type": "string",
+          "description": " 昵称"
+        },
+        "avatar": {
+          "type": "string",
+          "description": " 头像"
+        },
+        "backgroundImg": {
+          "type": "string",
+          "description": " 背景"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 身高"
+        },
+        "weight": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 体重"
+        },
+        "gender": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 性别 1=女 2=男 3=保密"
+        },
+        "birthday": {
+          "type": "string",
+          "description": " 生日"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 国家表id"
+        },
+        "countryName": {
+          "type": "string",
+          "description": " 国家名称"
+        },
+        "employmentId": {
+          "type": "integer",
+          "format": "int32",
+          "description": " 求职类型表id"
+        },
+        "identity": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 用户身份 1=求职者 2=学生 3=招聘方"
+        },
+        "province": {
+          "type": "string",
+          "description": " 省份"
+        },
+        "city": {
+          "type": "string",
+          "description": " 城市"
+        },
+        "address": {
+          "type": "string",
+          "description": " 详细地点"
+        },
+        "personalStrength": {
+          "type": "string",
+          "description": " 个人实力"
+        },
+        "purposeCity": {
+          "type": "string",
+          "description": " 意向城市 多个用英语逗号分割"
+        },
+        "interests": {
+          "type": "string",
+          "description": " 兴趣爱好 多个用英语逗号分割"
+        },
+        "datingTargets": {
+          "type": "string",
+          "description": " 交友的目 多个用英语逗号分割"
+        },
+        "personalSkills": {
+          "type": "string",
+          "description": " 个人技能 多个用英语逗号分割"
+        }
+      },
+      "title": "OtherUserInfo",
+      "required": [
+        "firstName",
+        "lastName",
+        "nickname",
+        "avatar",
+        "backgroundImg",
+        "height",
+        "weight",
+        "gender",
+        "birthday",
+        "countryId",
+        "countryName",
+        "employmentId",
+        "identity",
+        "province",
+        "city",
+        "address",
+        "personalStrength",
+        "purposeCity",
+        "interests",
+        "datingTargets",
+        "personalSkills"
+      ]
+    },
+    "Pagination": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 页数"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 条数"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总记录"
+        }
+      },
+      "title": "Pagination",
+      "required": [
+        "page",
+        "size",
+        "total"
+      ]
+    },
+    "RegisterEmailReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码 4-6"
+        },
+        "password": {
+          "type": "string",
+          "description": " 密码 6-32"
+        },
+        "invitationCode": {
+          "type": "string",
+          "description": " 上级邀请码"
+        }
+      },
+      "title": "RegisterEmailReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "code",
+        "验证码",
+        "password",
+        "密码",
+        "omitempty",
+        "邀请码"
+      ]
+    },
+    "SendEmailReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        }
+      },
+      "title": "SendEmailReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "googleCaptcha",
+        "谷歌验证Token"
+      ]
+    },
+    "StatusResp": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 状态 0 失败"
+        }
+      },
+      "title": "StatusResp",
+      "required": [
+        "status"
+      ]
+    },
+    "UpdUserCompanySkillsReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "jobSkills": {
+          "type": "string",
+          "description": " 使用技能 0-1000 多个用英文逗号分隔开"
+        }
+      },
+      "title": "UpdUserCompanySkillsReq",
+      "required": [
+        "id",
+        "required",
+        "主键",
+        "jobSkills",
+        "使用技能"
+      ]
+    },
+    "UpdUserProjectSkillsReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "projectSkills": {
+          "type": "string",
+          "description": " 使用技能 0-1000 多个用英文逗号分隔开"
+        }
+      },
+      "title": "UpdUserProjectSkillsReq",
+      "required": [
+        "id",
+        "required",
+        "主键",
+        "projectSkills",
+        "omitempty",
+        "使用技能"
+      ]
+    },
+    "UpdateUserAddressReq": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string",
+          "description": " 详细地点 1-500"
+        }
+      },
+      "title": "UpdateUserAddressReq",
+      "required": [
+        "address",
+        "required",
+        "详细地点"
+      ]
+    },
+    "UpdateUserAvatarReq": {
+      "type": "object",
+      "properties": {
+        "avatar": {
+          "type": "string",
+          "description": " 头像 1-200"
+        }
+      },
+      "title": "UpdateUserAvatarReq",
+      "required": [
+        "avatar",
+        "required",
+        "头像地址"
+      ]
+    },
+    "UpdateUserBackgroundReq": {
+      "type": "object",
+      "properties": {
+        "background": {
+          "type": "string",
+          "description": " 背景 1-200"
+        }
+      },
+      "title": "UpdateUserBackgroundReq",
+      "required": [
+        "background",
+        "required",
+        "头像地址"
+      ]
+    },
+    "UpdateUserBaseReq": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": " 姓 1-200"
+        },
+        "lastName": {
+          "type": "string",
+          "description": " 名 1-200"
+        },
+        "nickName": {
+          "type": "string",
+          "description": " 昵称 1-32"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 国家主键 \u003e=1"
+        },
+        "countryName": {
+          "type": "string",
+          "description": " 国家名称 1-200"
+        },
+        "province": {
+          "type": "string",
+          "description": " 省份 0-200"
+        },
+        "city": {
+          "type": "string",
+          "description": " 城市 1-200"
+        },
+        "address": {
+          "type": "string",
+          "description": " 详细地点 0-500"
+        }
+      },
+      "title": "UpdateUserBaseReq",
+      "required": [
+        "firstName",
+        "required",
+        "姓",
+        "lastName",
+        "名",
+        "nickName",
+        "昵称",
+        "countryId",
+        "国家主键",
+        "countryName",
+        "国家名称",
+        "omitempty",
+        "省份",
+        "city",
+        "城市",
+        "详细地点"
+      ]
+    },
+    "UpdateUserBirthdayReq": {
+      "type": "object",
+      "properties": {
+        "birthday": {
+          "type": "string",
+          "description": " 生日 1986-01-01"
+        }
+      },
+      "title": "UpdateUserBirthdayReq",
+      "required": [
+        "birthday",
+        "required",
+        "生日"
+      ]
+    },
+    "UpdateUserCityReq": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": " 城市 1-200"
+        }
+      },
+      "title": "UpdateUserCityReq",
+      "required": [
+        "city",
+        "required",
+        "城市"
+      ]
+    },
+    "UpdateUserCountryReq": {
+      "type": "object",
+      "properties": {
+        "countryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 国家主键 \u003e=1"
+        },
+        "countryName": {
+          "type": "string",
+          "description": " 国家名称 1-200"
+        }
+      },
+      "title": "UpdateUserCountryReq",
+      "required": [
+        "countryId",
+        "required",
+        "国家主键",
+        "countryName",
+        "国家名称"
+      ]
+    },
+    "UpdateUserDatingTargetsReq": {
+      "type": "object",
+      "properties": {
+        "datingTargets": {
+          "type": "string",
+          "description": " 交友的目 1-2000 多个用英语逗号分割"
+        }
+      },
+      "title": "UpdateUserDatingTargetsReq",
+      "required": [
+        "datingTargets",
+        "required",
+        "交友的目"
+      ]
+    },
+    "UpdateUserGenderReq": {
+      "type": "object",
+      "properties": {
+        "gender": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 性别 1=女 2=男 3=保密"
+        }
+      },
+      "title": "UpdateUserGenderReq",
+      "required": [
+        "gender",
+        "required",
+        "性别"
+      ]
+    },
+    "UpdateUserIdentityReq": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 用户身份 1=求职者 2=学生 3=招聘方"
+        }
+      },
+      "title": "UpdateUserIdentityReq",
+      "required": [
+        "identity",
+        "required",
+        "用户身份"
+      ]
+    },
+    "UpdateUserInterestsReq": {
+      "type": "object",
+      "properties": {
+        "interests": {
+          "type": "string",
+          "description": " 兴趣爱好 1-2000 多个用英语逗号分割"
+        }
+      },
+      "title": "UpdateUserInterestsReq",
+      "required": [
+        "interests",
+        "required",
+        "兴趣爱好"
+      ]
+    },
+    "UpdateUserLocationReq": {
+      "type": "object",
+      "properties": {
+        "timeZone": {
+          "type": "string",
+          "description": " 时区 0-100"
+        },
+        "country": {
+          "type": "string",
+          "description": " 国家 0-200"
+        },
+        "countryCode": {
+          "type": "string",
+          "description": " 国家编号 0-50"
+        },
+        "province": {
+          "type": "string",
+          "description": " 省份 0-200"
+        },
+        "city": {
+          "type": "string",
+          "description": " 城市 0-200"
+        },
+        "state": {
+          "type": "string",
+          "description": " 县 0-200"
+        },
+        "area": {
+          "type": "string",
+          "description": " 区域 0-200"
+        },
+        "street": {
+          "type": "string",
+          "description": " 街道 0-500"
+        },
+        "latitude": {
+          "type": "number",
+          "format": "double",
+          "description": " 纬度"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double",
+          "description": " 经度"
+        },
+        "postalCode": {
+          "type": "string",
+          "description": " 邮政编码 0-50"
+        },
+        "address": {
+          "type": "string",
+          "description": " 详细地点 0-1000"
+        }
+      },
+      "title": "UpdateUserLocationReq",
+      "required": [
+        "timeZone",
+        "required",
+        "时区",
+        "country",
+        "国家",
+        "countryCode",
+        "国家编号",
+        "province",
+        "城市",
+        "city",
+        "state",
+        "县",
+        "area",
+        "区域",
+        "street",
+        "街道",
+        "latitude",
+        "纬度",
+        "longitude",
+        "经度",
+        "postalCode",
+        "邮政编码",
+        "address",
+        "详细地点"
+      ]
+    },
+    "UpdateUserModeTypeReq": {
+      "type": "object",
+      "properties": {
+        "modeType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否公开 1=公开 2=隐藏"
+        }
+      },
+      "title": "UpdateUserModeTypeReq",
+      "required": [
+        "modeType",
+        "required",
+        "是否公开"
+      ]
+    },
+    "UpdateUserNameReq": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": " 姓 1-200"
+        },
+        "lastName": {
+          "type": "string",
+          "description": " 名 1-200"
+        }
+      },
+      "title": "UpdateUserNameReq",
+      "required": [
+        "firstName",
+        "required",
+        "姓",
+        "lastName",
+        "名"
+      ]
+    },
+    "UpdateUserNickNameReq": {
+      "type": "object",
+      "properties": {
+        "nickName": {
+          "type": "string",
+          "description": " 昵称 1-32"
+        }
+      },
+      "title": "UpdateUserNickNameReq",
+      "required": [
+        "nickName",
+        "required",
+        "昵称"
+      ]
+    },
+    "UpdateUserPersonalSkillsReq": {
+      "type": "object",
+      "properties": {
+        "personalSkills": {
+          "type": "string",
+          "description": " 个人技能 1-2000 多个用英语逗号分割"
+        }
+      },
+      "title": "UpdateUserPersonalSkillsReq",
+      "required": [
+        "personalSkills",
+        "required",
+        "个人技能"
+      ]
+    },
+    "UpdateUserPersonalStrengthReq": {
+      "type": "object",
+      "properties": {
+        "personalStrength": {
+          "type": "string",
+          "description": " 个人实力 1-1000"
+        }
+      },
+      "title": "UpdateUserPersonalStrengthReq",
+      "required": [
+        "personalStrength",
+        "required",
+        "个人实力"
+      ]
+    },
+    "UpdateUserProvinceReq": {
+      "type": "object",
+      "properties": {
+        "province": {
+          "type": "string",
+          "description": " 省份 1-200"
+        }
+      },
+      "title": "UpdateUserProvinceReq",
+      "required": [
+        "province",
+        "required",
+        "省份"
+      ]
+    },
+    "UpdateUserPurposeCityReq": {
+      "type": "object",
+      "properties": {
+        "purposeCity": {
+          "type": "string",
+          "description": " 意向城市 1-2000 多个用英语逗号分割"
+        }
+      },
+      "title": "UpdateUserPurposeCityReq",
+      "required": [
+        "purposeCity",
+        "required",
+        "意向城市"
+      ]
+    },
+    "UpdateUserWeightReq": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 身高 1-500"
+        },
+        "weight": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 体重 1-500"
+        }
+      },
+      "title": "UpdateUserWeightReq",
+      "required": [
+        "height",
+        "required",
+        "身高",
+        "weight",
+        "体重"
+      ]
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 用户标识"
+        },
+        "email": {
+          "type": "string",
+          "description": " 邮箱"
+        },
+        "mobile": {
+          "type": "string",
+          "description": " 手机号"
+        },
+        "mobileCountryId": {
+          "type": "string",
+          "description": " 手机国家id"
+        },
+        "mobileCountryName": {
+          "type": "string",
+          "description": " 手机国家名称"
+        },
+        "mobileCountryNum": {
+          "type": "string",
+          "description": " 手机国家区号"
+        },
+        "userType": {
+          "type": "string",
+          "description": " 用户类型 1=邮箱 2=手机 3=谷歌 4=苹果"
+        },
+        "invitationCode": {
+          "type": "string",
+          "description": " 邀请码"
+        }
+      },
+      "title": "User",
+      "required": [
+        "userId",
+        "email",
+        "mobile",
+        "mobileCountryId",
+        "mobileCountryName",
+        "mobileCountryNum",
+        "userType",
+        "invitationCode"
+      ]
+    },
+    "UserCompany": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "companyName": {
+          "type": "string",
+          "description": " 公司名称"
+        },
+        "companyCountry": {
+          "type": "string",
+          "description": " 公司国家"
+        },
+        "companyCity": {
+          "type": "string",
+          "description": " 公司城市"
+        },
+        "companyIndustry": {
+          "type": "string",
+          "description": " 公司行业"
+        },
+        "startTime": {
+          "type": "string",
+          "description": " 入学时间"
+        },
+        "endTime": {
+          "type": "string",
+          "description": " 毕业时间"
+        },
+        "jobPosition": {
+          "type": "string",
+          "description": " 工作职位"
+        },
+        "jobContent": {
+          "type": "string",
+          "description": " 工作内容"
+        },
+        "jobSummary": {
+          "type": "string",
+          "description": " 工作总结"
+        },
+        "jobSkills": {
+          "type": "string",
+          "description": " 使用技能 多个用英文逗号分隔开"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "UserCompany",
+      "required": [
+        "id",
+        "companyName",
+        "companyCountry",
+        "companyCity",
+        "companyIndustry",
+        "startTime",
+        "endTime",
+        "jobPosition",
+        "jobContent",
+        "jobSummary",
+        "jobSkills",
+        "orderBy"
+      ]
+    },
+    "UserCompanyResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserCompany"
+          }
+        }
+      },
+      "title": "UserCompanyResp",
+      "required": [
+        "list"
+      ]
+    },
+    "UserCustomAttribute": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "title": {
+          "type": "string",
+          "description": " 标题 3-20"
+        },
+        "value": {
+          "type": "string",
+          "description": " 值"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 视频排序 从小到大的顺序"
+        }
+      },
+      "title": "UserCustomAttribute",
+      "required": [
+        "id",
+        "title",
+        "value",
+        "orderBy"
+      ]
+    },
+    "UserCustomAttributeResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserCustomAttribute"
+          }
+        }
+      },
+      "title": "UserCustomAttributeResp",
+      "required": [
+        "list"
+      ]
+    },
+    "UserEducation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "organizationName": {
+          "type": "string",
+          "description": " 组织名称"
+        },
+        "organizationCountry": {
+          "type": "string",
+          "description": " 组织国家"
+        },
+        "organizationCity": {
+          "type": "string",
+          "description": " 组织城市"
+        },
+        "organizationLevel": {
+          "type": "string",
+          "description": " 组织级别"
+        },
+        "startTime": {
+          "type": "string",
+          "description": " 入学时间"
+        },
+        "endTime": {
+          "type": "string",
+          "description": " 毕业时间"
+        },
+        "studySpecialty": {
+          "type": "string",
+          "description": " 学习专业"
+        },
+        "studyAchievement": {
+          "type": "string",
+          "description": " 学习成就"
+        },
+        "degreeEducation": {
+          "type": "string",
+          "description": " 教育学位"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "UserEducation",
+      "required": [
+        "id",
+        "organizationName",
+        "organizationCountry",
+        "organizationCity",
+        "organizationLevel",
+        "startTime",
+        "endTime",
+        "studySpecialty",
+        "studyAchievement",
+        "degreeEducation",
+        "orderBy"
+      ]
+    },
+    "UserEducationResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserEducation"
+          }
+        }
+      },
+      "title": "UserEducationResp",
+      "required": [
+        "list"
+      ]
+    },
+    "UserFeedbackReq": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "description": " 反馈内容 10-1000字符"
+        },
+        "fileUrls": {
+          "type": "string",
+          "description": " 图片地址 多个用逗号分割 0-2000"
+        }
+      },
+      "title": "UserFeedbackReq",
+      "required": [
+        "content",
+        "required",
+        "反馈内容",
+        "omitempty",
+        "图片地址"
+      ]
+    },
+    "UserInfo": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 用户标识"
+        },
+        "firstName": {
+          "type": "string",
+          "description": " 姓"
+        },
+        "lastName": {
+          "type": "string",
+          "description": " 名"
+        },
+        "nickname": {
+          "type": "string",
+          "description": " 昵称"
+        },
+        "avatar": {
+          "type": "string",
+          "description": " 头像"
+        },
+        "backgroundImg": {
+          "type": "string",
+          "description": " 背景"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 身高"
+        },
+        "weight": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 体重"
+        },
+        "gender": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 性别 1=女 2=男 3=保密"
+        },
+        "modeType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否公开 1=公开 2=隐藏"
+        },
+        "birthday": {
+          "type": "string",
+          "description": " 生日"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 国家表id"
+        },
+        "countryName": {
+          "type": "string",
+          "description": " 国家名称"
+        },
+        "employmentId": {
+          "type": "integer",
+          "format": "int32",
+          "description": " 求职类型表id"
+        },
+        "identity": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 用户身份 1=求职者或约会者 2=学生 3=招聘方"
+        },
+        "province": {
+          "type": "string",
+          "description": " 省份"
+        },
+        "city": {
+          "type": "string",
+          "description": " 城市"
+        },
+        "address": {
+          "type": "string",
+          "description": " 详细地点"
+        },
+        "personalStrength": {
+          "type": "string",
+          "description": " 个人实力"
+        },
+        "purposeCity": {
+          "type": "string",
+          "description": " 意向城市 多个用英语逗号分割"
+        },
+        "interests": {
+          "type": "string",
+          "description": " 兴趣爱好 多个用英语逗号分割"
+        },
+        "datingTargets": {
+          "type": "string",
+          "description": " 交友的目 多个用英语逗号分割"
+        },
+        "personalSkills": {
+          "type": "string",
+          "description": " 个人技能 多个用英语逗号分割"
+        },
+        "views": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 被浏览次数统计"
+        }
+      },
+      "title": "UserInfo",
+      "required": [
+        "userId",
+        "firstName",
+        "lastName",
+        "nickname",
+        "avatar",
+        "backgroundImg",
+        "height",
+        "weight",
+        "gender",
+        "modeType",
+        "birthday",
+        "countryId",
+        "countryName",
+        "employmentId",
+        "identity",
+        "province",
+        "city",
+        "address",
+        "personalStrength",
+        "purposeCity",
+        "interests",
+        "datingTargets",
+        "personalSkills",
+        "views"
+      ]
+    },
+    "UserPhoto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "title": {
+          "type": "string",
+          "description": " 标题"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": " 完整地址"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "UserPhoto",
+      "required": [
+        "id",
+        "title",
+        "fileUrl",
+        "orderBy"
+      ]
+    },
+    "UserPhotoResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserPhoto"
+          }
+        }
+      },
+      "title": "UserPhotoResp",
+      "required": [
+        "list"
+      ]
+    },
+    "UserProject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "projectName": {
+          "type": "string",
+          "description": " 项目名称"
+        },
+        "projectContent": {
+          "type": "string",
+          "description": " 项目内容"
+        },
+        "jobContent": {
+          "type": "string",
+          "description": " 工作内容"
+        },
+        "startTime": {
+          "type": "string",
+          "description": " 启动时间"
+        },
+        "endTime": {
+          "type": "string",
+          "description": " 结束时间"
+        },
+        "projectLink": {
+          "type": "string",
+          "description": " 项目链接"
+        },
+        "projectSkills": {
+          "type": "string",
+          "description": " 使用技能 多个用英文逗号分隔开"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "UserProject",
+      "required": [
+        "id",
+        "projectName",
+        "projectContent",
+        "jobContent",
+        "startTime",
+        "endTime",
+        "projectLink",
+        "projectSkills",
+        "orderBy"
+      ]
+    },
+    "UserProjectResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserProject"
+          }
+        }
+      },
+      "title": "UserProjectResp",
+      "required": [
+        "list"
+      ]
+    },
+    "UserVideo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 主键"
+        },
+        "title": {
+          "type": "string",
+          "description": " 标题"
+        },
+        "coverUrl": {
+          "type": "string",
+          "description": " 封面完整地址"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": " 视频完整地址"
+        },
+        "playTime": {
+          "type": "number",
+          "format": "double",
+          "description": " 播放时长"
+        },
+        "videoSize": {
+          "type": "number",
+          "format": "double",
+          "description": " 视频大小kb"
+        },
+        "orderBy": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 排序 从小到大的顺序"
+        }
+      },
+      "title": "UserVideo",
+      "required": [
+        "id",
+        "title",
+        "coverUrl",
+        "fileUrl",
+        "playTime",
+        "videoSize",
+        "orderBy"
+      ]
+    },
+    "UserVideoResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserVideo"
+          }
+        }
+      },
+      "title": "UserVideoResp",
+      "required": [
+        "list"
+      ]
+    },
+    "WebGoogleAuthReq": {
+      "type": "object",
+      "properties": {
+        "callbackURL": {
+          "type": "string",
+          "description": " 回调路径 1-200"
+        }
+      },
+      "title": "WebGoogleAuthReq",
+      "required": [
+        "callbackURL",
+        "required",
+        "回调路径"
+      ]
+    },
+    "WebGoogleAuthResp": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": " 域名"
+        },
+        "clientId": {
+          "type": "string",
+          "description": " id"
+        },
+        "redirectUri": {
+          "type": "string",
+          "description": " redirect_uri"
+        },
+        "scope": {
+          "type": "string",
+          "description": " scope"
+        },
+        "state": {
+          "type": "string",
+          "description": " state"
+        }
+      },
+      "title": "WebGoogleAuthResp",
+      "required": [
+        "url",
+        "clientId",
+        "redirectUri",
+        "scope",
+        "state"
+      ]
+    },
+    "WebLoginEmailCodeReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码 4-6"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID"
+        },
+        "browserName": {
+          "type": "string",
+          "description": " browserName"
+        }
+      },
+      "title": "WebLoginEmailCodeReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "code",
+        "验证码",
+        "googleCaptcha",
+        "谷歌验证Token",
+        "deviceId",
+        "设备UUID",
+        "browserName",
+        "浏览器名称"
+      ]
+    },
+    "WebLoginEmailPasswordReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "password": {
+          "type": "string",
+          "description": " 密码 6-32"
+        },
+        "googleCaptcha": {
+          "type": "string",
+          "description": " 谷歌验证Token"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID"
+        },
+        "browserName": {
+          "type": "string",
+          "description": " browserName"
+        }
+      },
+      "title": "WebLoginEmailPasswordReq",
+      "required": [
+        "email",
+        "required",
+        "账号",
+        "password",
+        "密码",
+        "googleCaptcha",
+        "谷歌验证Token",
+        "deviceId",
+        "设备UUID",
+        "browserName",
+        "浏览器名称"
+      ]
+    },
+    "WebLoginGoogleReq": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": " 谷歌授权code 2-200"
+        },
+        "state": {
+          "type": "string",
+          "description": " 谷歌授权state 2-200"
+        },
+        "callbackURL": {
+          "type": "string",
+          "description": " 回调路径 1-200"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": " 设备UUID 10-100"
+        },
+        "browserName": {
+          "type": "string",
+          "description": " browserName 1-30"
+        }
+      },
+      "title": "WebLoginGoogleReq",
+      "required": [
+        "code",
+        "required",
+        "谷歌授权code",
+        "state",
+        "谷歌授权state",
+        "callbackURL",
+        "回调路径",
+        "deviceId",
+        "设备UUID",
+        "browserName",
+        "浏览器名称"
+      ]
+    },
+    "WebLoginResp": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 用户标识"
+        },
+        "avatar": {
+          "type": "string",
+          "description": " 头像"
+        },
+        "firstName": {
+          "type": "string",
+          "description": " 姓"
+        },
+        "lastName": {
+          "type": "string",
+          "description": " 名"
+        },
+        "nickName": {
+          "type": "string",
+          "description": " 昵称"
+        },
+        "accessToken": {
+          "type": "string",
+          "description": " 用户token"
+        },
+        "accessExpire": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 过期时长"
+        }
+      },
+      "title": "WebLoginResp",
+      "required": [
+        "userId",
+        "avatar",
+        "firstName",
+        "lastName",
+        "nickName",
+        "accessToken",
+        "accessExpire"
+      ]
+    },
+    "WebRegisterEmailReq": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": " 邮箱 2-100"
+        },
+        "code": {
+          "type": "string",
+          "description": " 验证码 4-6"
+        },
+        "password": {
+          "type": "string",
+          "description": " 密码 6-32"
+        },
+        "invitationCode": {
+          "type": "string",
+          "description": " 上级邀请码"
+        }
+      },
+      "title": "WebRegisterEmailReq",
+      "required": [
+        "email",
+        "required",
+        "邮箱",
+        "code",
+        "验证码",
+        "password",
+        "密码",
+        "omitempty",
+        "邀请码"
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKey": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+syntax = "v1"
+
+info(
+    title: "用户经验"
+    desc: "用户经验"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserExperience {
+        Id                  int64 `json:"id"` // 主键
+        ExperienceOrganization  string `json:"organization"` // 所在组织
+        ExperiencePosition  string `json:"position"` // 担任职位
+        ExperienceTitle     string `json:"title"` // 标题
+        ExperienceSummary 	string `json:"summary"` // 摘要
+        ExperienceContent 	string `json:"content"` // 内容
+        StartTime	        string `json:"startTime"` // 入学时间
+        EndTime     	    string `json:"endTime"` // 毕业时间
+        OrderBy	            int64 `json:"orderBy"` // 排序 从小到大的顺序
+    }
+    AddUserExperienceReq {
+        Id 	                    int64	`json:"id" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        ExperienceOrganization  string	`json:"organization" validate:"required,min=1,max=100" label:"所在组织"` // 所在组织 1-100
+        ExperiencePosition		string  `json:"position" validate:"required,min=1,max=100" label:"担任职位"` // 担任职位 1-100
+        ExperienceTitle		    string  `json:"title" validate:"required,min=1,max=100" label:"标题"` // 标题 1-100
+        ExperienceSummary		string  `json:"summary,optional" validate:"omitempty,min=0,max=200" label:"摘要"` // 摘要 0-200
+        ExperienceContent		string  `json:"content" validate:"required,min=1,max=1000" label:"内容"` // 内容 1-1000
+        StartTime		        string  `json:"startTime" validate:"required,min=1,max=20" label:"开始时间"` // 开始时间 1-20
+        EndTime		            string  `json:"endTime,optional" validate:"omitempty,min=0,max=20" label:"结束时间"` // 结束时间 0-20
+        OrderBy 	            int64	`json:"orderBy" validate:"omitempty,gte=0" label:"排序"` // 排序 从小到大的顺序
+    }
+    DeleteUserExperienceReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    GetUserExperienceReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"主键"` // 主键
+    }
+    UserExperienceResp {
+        List []UserExperience `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : userexperience
+    prefix : /api/user/experience
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取经验"
+    )
+    @handler List
+    post /list returns (UserExperienceResp)
+
+    @doc(
+        summary: "新增经验"
+    )
+    @handler Add
+    post /add (AddUserExperienceReq) returns (IdResp)
+
+    @doc(
+        summary: "删除经验"
+    )
+    @handler Delete
+    post /delete (DeleteUserExperienceReq) returns (StatusResp)
+
+    @doc(
+        summary: "根据ID获取经验"
+    )
+    @handler Get
+    post /get (GetUserExperienceReq) returns (UserExperience)
+}

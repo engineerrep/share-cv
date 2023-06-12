@@ -1,0 +1,100 @@
+Name: share-cv-api
+Host: 0.0.0.0
+Port: 6000
+Mode: pro
+Salt: b641ea74484fb2c9
+Timeout: 10000
+MaxBytes: 52428800
+
+App:
+  Name: "Share-CV"
+  IPDataPath: "/app/mmdb/geolite2country.mmdb"
+  ApiUrls: [ "https://api.xxxxxx.com" ]
+  WebUrls: [ "https://www.xxxxxx.com" ]
+
+Region:
+  China: "中国"
+  Asia: [ "亚洲","澳大利亚洲","南极洲" ]
+  America: [ "北美洲","南美洲" ]
+  Europe: [ "欧洲","非洲" ]
+
+Log:
+  Mode: console
+  Level: info
+  KeepDays: 7
+
+JwtAuth:
+  AccessSecret: xxxxxx
+  AccessExpire: 2592000
+
+User:
+  MaxPhoto: 100
+  MaxVideo: 20
+  MaxEducation: 10
+  MaxCustomAttribute: 12
+  MaxInvitationCode: 10
+
+Ali:
+  AccessKeyID: "xxxxxx"
+  AccessKeySecret: "xxxxxx"
+
+AliEmail:
+  AccountName: "service@xxxxxx.com"
+  AddressType: 1
+  Endpoint: "dm.aliyuncs.com"
+
+AliOSS:
+  RoleArn: "acs:ram::xxxxxx:role/xxxxxx"
+  RoleSessionName: "external-username"
+  AuthUrl: "/api/oss/auth/server"
+  BucketNameHK: "gocvd-hk"
+  BucketUrlHK: "https://xxxxxx.xxxxxx.com"
+  BucketEndpointHK: "https://xxxxxx.aliyuncs.com"
+  BucketNameUS: "share-cv-us"
+  BucketUrlUS: "https://ossus.xxxxxx.com"
+  BucketEndpointUS: "https://oss-us-west-1.aliyuncs.com"
+  BucketNameAP: "share-cv-sg"
+  BucketUrlAP: "https://xxxxxx.xxxxxx.com"
+  BucketEndpointAP: "https://oss-ap-southeast-1.aliyuncs.com"
+
+Google:
+  Recaptcha: "xxxxxx"
+  AuthClientId: "xxxxxx.apps.googleusercontent.com"
+  AuthClientKey: "xxxxxx"
+  State: "sharecv"
+  Scopes: [ "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email" ]
+  AuthURL: "https://accounts.google.com/o/oauth2/v2/auth"
+  TokenURL: "https://oauth2.googleapis.com/token"
+  UserInfoURL: "https://www.googleapis.com/oauth2/v1/userinfo"
+
+OneSignal:
+  Url: "https://onesignal.com/api/v1/notifications"
+  AppId: "xxxxxx"
+  RestApiKey: "xxxxxx"
+
+Twilio:
+  AccountSid: "xxxxxx"
+  AccountToken: "xxxxxx"
+  SmsFrom: "+xxxxxx"
+
+# smtp.gmail.com GEmail SMTP端口 (SSL)： 465
+SmtpEmail:
+  FromAddress: "xxxxxx@xxxxxx.com"
+  FromName: "Share-CV"
+  Subject: "Share-CV"
+  Host: "smtp.xxxxxx.com"
+  Port: 25
+  Password: "xxxxxx"
+
+Mysql:
+  DataSource: "root:xxxxxx@(mysql:3306)/app_share_cv?charset=utf8mb4&parseTime=true"
+
+Cache:
+  - Host: "redis:6379"
+    Pass: "xxxxxx"
+    Type: "node"
+
+Redis:
+  Host: "redis:6379"
+  Pass: "xxxxxx"
+  Type: "node"

@@ -1,0 +1,71 @@
+syntax = "v1"
+
+info(
+    title: "用户自定义属性"
+    desc: "用户自定义属性"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserCustomAttribute {
+        Id 		int64 `json:"id"` // 主键
+        Title		string	`json:"title"` // 标题 3-20
+        Content		string  `json:"content"` // 内容
+        Summary		string  `json:"summary"` // 摘要
+        StartTime	string  `json:"startTime"` // 开始时间
+        EndTime		string  `json:"endTime"` // 结束时间
+        OrderBy 	int64	`json:"orderBy"` // 视频排序 从小到大的顺序
+    }
+    ChangeUserCustomAttributeReq {
+        Id 	        int64	`json:"id" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        Title		string	`json:"title" validate:"required,min=3,max=30" label:"标题"` // 标题 3-30
+        Content		string  `json:"content" validate:"required,min=5,max=1000" label:"内容"` // 内容 5-1000
+        Summary		string  `json:"summary,optional" validate:"omitempty,min=0,max=200" label:"摘要"` // 摘要 0-200
+        StartTime	string  `json:"startTime" validate:"required,min=4,max=20" label:"开始时间"` // 开始时间 4-20
+        EndTime		string  `json:"endTime,optional" validate:"omitempty,min=0,max=20" label:"结束时间"` // 结束时间 0-20
+        OrderBy 	int64	`json:"orderBy" validate:"omitempty,gte=0" label:"排序"` // 排序 从小到大的顺序
+    }
+    DeleteUserCustomAttributeReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"自定义属性id"` // 自定义属性id
+    }
+    GetUserCustomAttributeReq {
+        Id int64  `json:"id" validate:"required,gte=0" label:"自定义属性id"` // 自定义属性id
+    }
+    UserCustomAttributeResp {
+        List []UserCustomAttribute `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : usercustomattribute
+    prefix : /api/user/custom/attribute
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取自定义属性列表"
+    )
+    @handler List
+    post /list returns (UserCustomAttributeResp)
+
+    @doc(
+        summary: "新增自定义属性"
+    )
+    @handler Add
+    post /add (ChangeUserCustomAttributeReq) returns (IdResp)
+
+    @doc(
+        summary: "删除自定义属性"
+    )
+    @handler Delete
+    post /delete (DeleteUserCustomAttributeReq) returns (StatusResp)
+
+    @doc(
+        summary: "根据ID获取自定义属性"
+    )
+    @handler Get
+    post /get (GetUserCustomAttributeReq) returns (UserCustomAttribute)
+}

@@ -1,0 +1,59 @@
+syntax = "v1"
+
+info(
+    title: "用户相册"
+    desc: "用户相册"
+    author: "lab"
+    email: "sharecv@lab.com"
+)
+
+type (
+    UserPhoto {
+        Id 		int64 `json:"id"` // 主键
+        Title 	string `json:"title"` // 标题
+        FileUrl	string `json:"fileUrl"` // 完整地址
+        OrderBy	int64 `json:"orderBy"` // 排序 从小到大的顺序
+    }
+    AddUserPhoto {
+        Id 	        int64	`json:"id,optional" validate:"omitempty,gte=0" label:"主键"` // 主键 0 新增 >0 更新
+        Title		string	`json:"title,optional" validate:"omitempty,min=0,max=50" label:"相册标题"` // 相册标题 0-50
+        FileUrl		string  `json:"fileUrl" validate:"required,min=2,max=200" label:"相册URL"` // 相册URL 2-200
+        OrderBy 	int64	`json:"orderBy,optional" validate:"omitempty,gte=0" label:"排序"` // 排序 从小到大的顺序
+    }
+    AddUserPhotoReq {
+        List []AddUserPhoto `json:"list" validate:"required" label:"相册集合"` // 相册集合
+    }
+    DeleteUserPhotoReq {
+        Id int64  `json:"id" validate:"required,gte=1" label:"相册id"` // 相册id
+    }
+    UserPhotoResp {
+        List []UserPhoto `json:"list"`
+    }
+)
+
+@server(
+    jwt: JwtAuth
+    group : userphoto
+    prefix : /api/user/photo
+    middleware: PermAuth
+)
+service core-api {
+
+    @doc(
+        summary: "获取相册"
+    )
+    @handler List
+    post /list returns (UserPhotoResp)
+
+    @doc(
+        summary: "新增相册"
+    )
+    @handler Add
+    post /add (AddUserPhotoReq) returns (StatusResp)
+
+    @doc(
+        summary: "删除相册"
+    )
+    @handler Delete
+    post /delete (DeleteUserPhotoReq) returns (StatusResp)
+}

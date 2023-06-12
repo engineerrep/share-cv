@@ -1,0 +1,87 @@
+syntax = "v1"
+
+info(
+    title: "base"
+    desc: "base"
+    author: "lab"
+	email: "sharecv@lab.com"
+)
+
+type (
+    Pagination {
+        Page  int64 `json:"page"` // 页数
+        Size  int64 `json:"size"` // 条数
+        Total int64 `json:"total"` // 总记录
+    }
+    User {
+	    UserId      string `json:"userId"`  // 用户标识
+	    Email       string `json:"email"` // 邮箱
+		Mobile      string `json:"mobile"` // 手机号
+		MobileCountryId		string	`json:"mobileCountryId"` // 手机国家id
+		MobileCountryName   string	`json:"mobileCountryName"` // 手机国家名称
+		MobileCountryNum	string	`json:"mobileCountryNum"` // 手机国家区号
+		UserType			string	`json:"userType"` // 用户类型 1=邮箱 2=手机 3=谷歌 4=苹果
+	    InvitationCode		string  `json:"invitationCode"` // 邀请码
+	}
+    UserInfo {
+	    UserId      	string `json:"userId"`  // 用户标识
+		FirstName 		string `json:"firstName"` // 姓
+		LastName 		string `json:"lastName"` // 名
+	    Nickname    	string `json:"nickname"` // 昵称
+	    Avatar      	string `json:"avatar"` // 头像
+		BackgroundImg   string `json:"backgroundImg"` // 背景
+		Height         	int64	`json:"height"` // 身高
+		Weight         	int64	`json:"weight"` // 体重
+	    Gender      	int64	`json:"gender"` // 性别 1=女 2=男 3=保密
+		ModeType    	int64	`json:"modeType"` // 是否公开 1=公开 2=隐藏
+		Birthday  		string  `json:"birthday"` // 生日
+		CountryId       int64	`json:"countryId"` // 国家表id
+		CountryName     string	`json:"countryName"` // 国家名称
+		EmploymentId    int32	`json:"employmentId"` // 求职类型表id
+		Identity    	int64	`json:"identity"` // 用户身份 1=求职者或约会者 2=学生 3=招聘方
+		Province  		string  `json:"province"` // 省份
+		City  			string  `json:"city"` // 城市
+		Address  		string  `json:"address"` // 详细地点
+		PersonalStrength string  `json:"personalStrength"` // 个人实力
+		PurposeCity  	string  `json:"purposeCity"` // 意向城市 多个用英语逗号分割
+		Interests  		string  `json:"interests"` // 兴趣爱好 多个用英语逗号分割
+		Languages  		string  `json:"languages"` // 会的语言 多个用英语逗号分割
+		DatingTargets  	string  `json:"datingTargets"` // 交友的目 多个用英语逗号分割
+		PersonalSkills  string  `json:"personalSkills"` // 个人技能 多个用英语逗号分割
+		Views  			int64   `json:"views"` // 被浏览次数统计
+	}
+	OtherUserInfo {
+		FirstName 		string `json:"firstName"` // 姓
+		LastName 		string `json:"lastName"` // 名
+		Nickname    	string `json:"nickname"` // 昵称
+		Avatar      	string `json:"avatar"` // 头像
+		BackgroundImg   string `json:"backgroundImg"` // 背景
+		Height         	int64	`json:"height"` // 身高
+		Weight         	int64	`json:"weight"` // 体重
+		Gender      	int64	`json:"gender"` // 性别 1=女 2=男 3=保密
+		Birthday  		string  `json:"birthday"` // 生日
+		CountryId       int64	`json:"countryId"` // 国家表id
+		CountryName     string	`json:"countryName"` // 国家名称
+		EmploymentId    int32	`json:"employmentId"` // 求职类型表id
+		Identity    	int64	`json:"identity"` // 用户身份 1=求职者 2=学生 3=招聘方
+		Province  		string  `json:"province"` // 省份
+		City  			string  `json:"city"` // 城市
+		Address  		string  `json:"address"` // 详细地点
+		PersonalStrength string  `json:"personalStrength"` // 个人实力
+		PurposeCity  	string  `json:"purposeCity"` // 意向城市 多个用英语逗号分割
+		Interests  		string  `json:"interests"` // 兴趣爱好 多个用英语逗号分割
+		Languages  		string  `json:"languages"` // 会的语言 多个用英语逗号分割
+		DatingTargets  	string  `json:"datingTargets"` // 交友的目 多个用英语逗号分割
+		PersonalSkills  string  `json:"personalSkills"` // 个人技能 多个用英语逗号分割
+	}
+	StatusResp {
+        Status  int64 `json:"status"` // 状态 0 失败
+    }
+	CodeResp {
+		Status  int64 `json:"status"` // 状态 0 失败
+		Code string  `json:"code"` // 验证码
+	}
+	IdResp {
+		Id  int64 `json:"id"` // 新增主键 0 失败 >0 成功
+	}
+)
